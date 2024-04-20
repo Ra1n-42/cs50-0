@@ -14,7 +14,7 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         // Print row of bricks
-        print_row(n ,i + 1);
+        print_pyramide(n ,i + 1);
     }
 }
 
