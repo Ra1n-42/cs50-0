@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int calculate_quarters(int cents);
 
 int main(void)
 {
@@ -12,6 +13,7 @@ int main(void)
     }
     while (cents < 0);
     // Calculate how many quarters you should give customer
+
     // Subtract the value of those quarters from cents
 
     // Calculate how many dimes you should give customer
@@ -26,7 +28,13 @@ int main(void)
     // Sum the number of quarters, dimes, nickels, and pennies used
     // Print that sum
 
-    int owed = get_int("Change owed: ");
 
-    printf("%d\n", owed-);
+    printf("%d\n", cents);
+}
+
+
+int calculate_quarters(int cents)
+{
+    // Calculate how many quarters you should give customer
+    
 }
