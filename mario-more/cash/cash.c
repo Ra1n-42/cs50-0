@@ -30,11 +30,11 @@ int main(void)
     // Calculate how many pennies you should give customer
     int pennies = calculate_pennies(cents);
     // Subtract the value of those pennies from remaining cents
-    cents -= pennies
+    cents -= pennies;
     // Sum the number of quarters, dimes, nickels, and pennies used
     int sum = dimes + nickels + pennies;
     // Print that sum
-    printf("%d",sum);
+    printf("%d \n",sum);
 
 
 }
