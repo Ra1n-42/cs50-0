@@ -63,7 +63,7 @@ int main(void){
 
 
     }
-
+    printf("INVALID\n");
 }
 
 int get_first_digit(long number) {
