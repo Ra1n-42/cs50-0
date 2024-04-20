@@ -6,5 +6,5 @@ int main(void)
 {
     int owed = get_int("Change owed: ");
 
-    printf("%d\n", owed);
+    printf("%d\n", owed-);
 }
