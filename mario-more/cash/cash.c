@@ -29,12 +29,18 @@ int main(void)
     // Print that sum
 
 
-    printf("%d\n", cents);
+    printf("%d\n", calculate_quarters(cents));
 }
 
 
 int calculate_quarters(int cents)
 {
     // Calculate how many quarters you should give customer
-    
+    int quarters = 0;
+    while (cents >= 25)
+    {
+        quarters++;
+        cents = cents - 25;
+    }
+    return quarters;
 }
