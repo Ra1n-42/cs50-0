@@ -32,7 +32,7 @@ int main(void)
     // Subtract the value of those pennies from remaining cents
     cents -= pennies;
     // Sum the number of quarters, dimes, nickels, and pennies used
-    int sum = dimes + nickels + pennies;
+    int sum = quaters + dimes + nickels + pennies;
     // Print that sum
     printf("%d \n",sum);
 
