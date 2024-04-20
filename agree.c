@@ -10,6 +10,6 @@ int main(void){
     }
     else if (c=='n')
     {
-        prinf("Not agreed.\n")
+        prinf("Not agreed.\n");
     }
 }
