@@ -23,7 +23,7 @@ int main(void)
 
 void print_row(int spaces, int bricks)
 {
-    printf("%i", spaces-bricks);
+    printf("%*s", spaces-bricks,"");
 
     for (int i = 0; i < bricks; i++)
     {
