@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print_row(int space, int bricks);
+void print_pyramide(int space, int bricks);
 
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
     }
 }
 
-void print_row(int space, int bricks)
+void print_pyramide(int space, int bricks)
 {
     string s;
     for (int i = 0; i < bricks; i++)
