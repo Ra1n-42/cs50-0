@@ -33,7 +33,7 @@ int main(void){
 
 
     if (sum % 10 != 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
-        printf("INVALID.\n");
+        printf("INVALID\n");
         return 1;
     }
 
@@ -45,7 +45,7 @@ int main(void){
 
     if (digit_count == 13 || digit_count == 16 ){
         if ( first==4 ){
-            printf("VISA.\n");
+            printf("VISA\n");
         }
     }
     if (digit_count == 16){
