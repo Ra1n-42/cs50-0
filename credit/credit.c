@@ -9,7 +9,7 @@ int main(void)
     {
         num = get_long("Number: ");
     }
-    while (num);
+    while (num < 1);
 
 
     long temp = num; // Eine temporäre Variable, um die ursprüngliche Zahl nicht zu ändern
