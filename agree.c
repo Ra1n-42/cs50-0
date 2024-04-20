@@ -4,11 +4,11 @@
 int main(void){
     char c = get_char("Do you agree? ");
 
-    if (c == 'y')
+    if (c == 'y' || c == 'Y')
     {
         prinf("Agreed.\n");
     }
-    else if (c=='n')
+    else if (c=='n' || c == 'N')
     {
         prinf("Not agreed.\n");
     }
