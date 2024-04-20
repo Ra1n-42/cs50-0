@@ -1,6 +1,5 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <math.h>
 
 int count_digits(long num);
 
@@ -9,8 +8,6 @@ int main(void)
     long credit_number = 4111111123456789;
     // int number = get_long("Number: ");
     int digit_count = count_digits(credit_number);
-    char card_str[digit_count];
-
 
     // let’s first underline every other digit, starting with the number’s second-to-last digit
     // let’s multiply each of the underlined digits by 2
@@ -18,7 +15,7 @@ int main(void)
     // Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end)
 
     // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
-    // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55
+    // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 and all Visa numbers start with 4.
     if (digit_count == 15)
     {
         printf("American Express");
