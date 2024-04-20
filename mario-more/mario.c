@@ -12,7 +12,7 @@ int main(void)
     }
     while (n < 1);
 
-    print_pyramid(n + 1);
+    print_pyramid(n);
 
 }
 
