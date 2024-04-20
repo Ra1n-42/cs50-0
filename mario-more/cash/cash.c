@@ -44,6 +44,10 @@ int calculate_quarters(int cents)
 {
     // Calculate how many quarters you should give customer
     int quarters = 0;
+    if (cents == 25)
+    {
+        return 1;
+    }
     while (cents >= 25)
     {
         quarters++;
@@ -56,6 +60,10 @@ int calculate_dimes(int cents)
 {
     // Calculate how many dimes you should give customer
     int dimes = 0;
+    if (cents == 10)
+    {
+        return 1;
+    }
     while (cents >= 10)
     {
         dimes++;
@@ -68,6 +76,10 @@ int calculate_nickels(int cents)
 {
     // Calculate how many nickels you should give customer
     int nickels = 0;
+    if (cents == 5)
+    {
+        return 1;
+    }
     while (cents >= 5)
     {
         nickels++;
