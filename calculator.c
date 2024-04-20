@@ -2,18 +2,13 @@
 #include <cs50.h>
 
 
-int add(int a, int b);
 
 int main(void)
 {
     int x = get_int("x: ");
     int y = get_int("y: ");
 
-
-    printf("%i\n", add(x, y));
+    float z = (float) x / (float) y;
+    printf("%.1f\n", z);
 }
 
-int add(int a, int b)
-{
-    return a + b;
-}
