@@ -4,7 +4,14 @@
 
 int main(void)
 {
-    long num = 371449635398431;
+    long num;
+    do
+    {
+        num = get_long("Number: ");
+    }
+    while (num);
+
+
     long temp = num; // Eine temporäre Variable, um die ursprüngliche Zahl nicht zu ändern
     int digit_count = 0;
     int sum = 0;
