@@ -18,14 +18,11 @@ int main(void)
     }
 }
 
-void print_pyramide(int space, int bricks)
+void print_pyramide(int bricks)
 {
-    string s;
     for (int i = 0; i < bricks; i++)
     {
 
-       printf("",bricks,"#");
+       printf();
     }
-
-    printf("\n");
 }
