@@ -17,15 +17,21 @@ int main(void)
 }
 
 void print_pyramid(int bricks) {
-    // rows
-    string s;
-    for (int i = 1; i <= bricks; i++) {
-        for (int j = 0; i < bricks-i; j += i)
-        {
-            s += " ";
+    for (int i = 0; i <= bricks; i++) {
+        // Leerzeichen für die Ausrichtung drucken
+        for (int j = 0; j < bricks - i; j++) {
+            printf(" ");
         }
-        s += "#";
-        printf("%s",s)
+        // Linke Seite der Pyramide drucken
+        for (int j = 0; j < i; j++) {
+            printf("#");
+        }
+        // Leerzeichen für die Trennung drucken
+        printf("  ");
+        // Rechte Seite der Pyramide drucken
+        for (int j = 0; j < i; j++) {
+            printf("#");
+        }
         printf("\n");
     }
 }
