@@ -5,7 +5,7 @@
 int main(void)
 {
     // int number = get_int("Number: ");
-    int card = 4111111111111111;
+    long card = 4111111123456789;
 
-    printf("%d\n", card);
+    printf("%li\n", card % 9);
 }
