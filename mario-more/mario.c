@@ -18,8 +18,9 @@ int main(void)
 
 void print_pyramid(int bricks) {
     // rows
+    string s;
     for (int i = 1; i <= bricks; i++) {
-        
+        s += " "
         printf("\n");
     }
 }
