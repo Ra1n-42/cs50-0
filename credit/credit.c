@@ -48,12 +48,12 @@ int main(void){
             printf("VISA.\n");
         }
     }
-    else if (digit_count == 16){
+    if (digit_count == 16){
         if ( first_two == 34 || first_two == 37 || first_two == 22 || first_two == 55 || first_two == 51){
             printf("MasterCard.\n");
         }
     }
-    else if (digit_count == 15){
+    if (digit_count == 15){
         if ( first_two == 51 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
             printf("American Express.\n");
         }
