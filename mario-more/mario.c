@@ -23,8 +23,7 @@ void print_row(int space, int bricks)
     string s;
     for (int i = 0; i < bricks; i++)
     {
-        s += "%*s #",space-bricks
-        printf(s," #");
+        printf("%*s# #",space-bricks, "\n");
     }
     printf("\n");
 }
