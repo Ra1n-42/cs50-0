@@ -48,15 +48,17 @@ int main(void){
                 printf("VISA\n");
             }
         }
-        if (digit_count == 16){
+        else if (digit_count == 16){
             if ( first_two == 34 || first_two == 37 || first_two == 22 || first_two == 55 || first_two == 51){
                 printf("MASTERCARD\n");
             }
         }
-        if (digit_count == 15){
+        else if (digit_count == 15){
             if ( first_two == 37 ){
                 printf("AMEX\n");
             }
+        }else{
+            printf("INVALID\n");
         }
 
 
