@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 
-int main(void)
-{
+int get_first_digit(long number);
+int get_first_two_digits(long number);
+
+int main(void){
     long num;
-    do
-    {
+    do{
         num = get_long("Number: ");
     }
     while (num < 1);
@@ -35,18 +36,30 @@ int main(void)
 
     if (sum % 10 != 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
         printf("INVALID.\n");
+        return 1
     }
-    if (digit_count > 12 | digit_count < 17 )
-    {
+    int first_two =  get_first_two_digits(num);
+    int first = get_first_digit(num);
+    if (digit_count > 12 | digit_count < 17 ){
         printf("VISA.\n");
     }
-    else if (digit_count == 16)
-    {
+    else if (digit_count == 16){
         printf("MasterCard.\n");
     }
-    else if (digit_count == 15)
-    {
+    else if (digit_count == 15){
         printf("American Express.\n");
     }
 }
 
+int get_first_digit(long number) {
+    while (number >= 10) {
+        number /= 10;
+    }
+    return number;
+}
+int get_first_two_digits(long number) {
+    while (number >= 100) {
+        number /= 10;
+    }
+    return number;
+}
