@@ -22,7 +22,7 @@ void print_row(int bricks)
 {
     for (int i = 0; i < bricks; i++)
     {
-        printf("#");
+        printf("%*s #",bricks);
     }
     printf("\n");
 }
