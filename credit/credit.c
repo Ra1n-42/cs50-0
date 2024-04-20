@@ -31,16 +31,20 @@ int main(void){
         temp = temp / 10; // Die aktuelle Ziffer entfernen, um zur nächsten Ziffer zu gelangen
     }
 
-    // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
-    // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 and all Visa numbers start with 4.
 
     if (sum % 10 != 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
         printf("INVALID.\n");
         return 1
     }
+
+    // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
+    // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 and all Visa numbers start with 4.
+
     int first_two =  get_first_two_digits(num);
     int first = get_first_digit(num);
+
     if (digit_count > 12 | digit_count < 17 ){
+        
         printf("VISA.\n");
     }
     else if (digit_count == 16){
