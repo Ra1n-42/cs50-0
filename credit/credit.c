@@ -44,11 +44,14 @@ int main(void){
     int first = get_first_digit(num);
 
     if (digit_count > 12 | digit_count < 17 ){
-        
-        printf("VISA.\n");
+        if ( first==4 ){
+            printf("VISA.\n");
+        }
     }
     else if (digit_count == 16){
-        printf("MasterCard.\n");
+        if ( first_two == 4 ){
+            printf("MasterCard.\n");
+        }
     }
     else if (digit_count == 15){
         printf("American Express.\n");
