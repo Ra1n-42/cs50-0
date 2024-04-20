@@ -18,17 +18,17 @@ int main(void)
 
 void print_pyramid(int bricks) {
     for (int i = 0; i <= bricks; i++) {
-        // Leerzeichen für die Ausrichtung drucken
+        // space to hash
         for (int j = 0; j < bricks - i; j++) {
             printf(" ");
         }
-        // Linke Seite der Pyramide drucken
+        // left side pyramid
         for (int j = 0; j < i; j++) {
             printf("#");
         }
-        // Leerzeichen für die Trennung drucken
+        // gap
         printf("  ");
-        // Rechte Seite der Pyramide drucken
+        // right side pyramid
         for (int j = 0; j < i; j++) {
             printf("#");
         }
