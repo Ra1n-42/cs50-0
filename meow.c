@@ -1,20 +1,16 @@
 #include <stdio.h>
-#include <cs50.h>
 
-
-int add(int x, int y);
+void meow(int n);
 
 int main(void)
 {
-    int x = get_int("x: ");
-    int y = get_int("y: ");
-
-    int result = add(x, y);
-
-    printf("%i\n", result);
+    meow(3);
 }
 
-int add(int x, int y)
+void meow(int n)
 {
-    return x + y;
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
 }
