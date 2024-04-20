@@ -32,7 +32,7 @@ int main(void){
     }
 
 
-    if (sum % 10 != 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
+    if (sum % 10 != 0 || digit_count < 13) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
         printf("INVALID\n");
         return 1;
     }
