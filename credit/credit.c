@@ -11,11 +11,13 @@ int main(void)
     int digit_count = count_digits(credit_number);
 
     long temp = credit_number;
-
+    int position = 0;
     while (temp > 0)
     {
         printf("last digit: %ld\n", temp % 10);
+        printf("last digit: %ld\n", temp % 10);
         temp = temp / 10;
+        position++;
     }
     // let’s first underline every other digit, starting with the number’s second-to-last digit
     // let’s multiply each of the underlined digits by 2
