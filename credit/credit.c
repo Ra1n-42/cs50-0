@@ -34,7 +34,7 @@ int main(void){
 
     if (sum % 10 != 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
         printf("INVALID.\n");
-        return 1
+        return 1;
     }
 
     // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
@@ -43,18 +43,20 @@ int main(void){
     int first_two =  get_first_two_digits(num);
     int first = get_first_digit(num);
 
-    if (digit_count > 12 | digit_count < 17 ){
+    if (digit_count > 12 || digit_count < 17 ){
         if ( first==4 ){
             printf("VISA.\n");
         }
     }
     else if (digit_count == 16){
-        if ( first_two == 4 ){
+        if ( first_two == 34 || first_two == 37 ){
             printf("MasterCard.\n");
         }
     }
     else if (digit_count == 15){
-        printf("American Express.\n");
+        if ( first_two == 51 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
+            printf("American Express.\n");
+        }
     }
 }
 
