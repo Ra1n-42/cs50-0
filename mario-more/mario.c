@@ -13,22 +13,21 @@ int main(void)
     while (n < 1);
 
     print_pyramid(n);
-
 }
 
 void print_pyramid(int bricks) {
-    for (int i = 0; i <= bricks; i++) {
-        // space to hash
+    for (int i = 1; i <= bricks; i++) {
+        // Leerzeichen für die Ausrichtung drucken
         for (int j = 0; j < bricks - i; j++) {
             printf(" ");
         }
-        // left side pyramid
+        // Linke Seite der Pyramide drucken
         for (int j = 0; j < i; j++) {
             printf("#");
         }
-        // gap
+        // Leerzeichen für die Trennung drucken
         printf("  ");
-        // right side pyramid
+        // Rechte Seite der Pyramide drucken
         for (int j = 0; j < i; j++) {
             printf("#");
         }
