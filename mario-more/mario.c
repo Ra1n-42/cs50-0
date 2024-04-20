@@ -14,15 +14,16 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         // Print row of bricks
-        print_row(n, i + 1);
+        print_row(n ,i + 1);
     }
 }
 
 void print_row(int space, int bricks)
 {
+    string s;
     for (int i = 0; i < bricks; i++)
     {
-        printf("%*s #",space - bricks,"");
+        printf("%*s  #",space-bricks);
     }
     printf("\n");
 }
