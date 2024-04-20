@@ -20,7 +20,12 @@ void print_pyramid(int bricks) {
     // rows
     string s;
     for (int i = 1; i <= bricks; i++) {
-        s += " "
+        for (int j = 0; i < bricks-i; j += i)
+        {
+            s += " ";
+        }
+        s += "#";
+        printf("%s",s)
         printf("\n");
     }
 }
