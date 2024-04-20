@@ -7,9 +7,16 @@ int main(void)
 {
     // int number = get_long("Number: ");
     long credit_number = 4111111123456789;
-    
+
     int digit_count = count_digits(credit_number);
 
+    long temp = credit_number;
+
+    while (temp > 0)
+    {
+        printf("last digit: %ld\n", temp % 10);
+        temp = temp / 10;
+    }
     // let’s first underline every other digit, starting with the number’s second-to-last digit
     // let’s multiply each of the underlined digits by 2
     // Now let’s add those products’ digits (i.e., not the products themselves) together
