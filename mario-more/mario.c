@@ -22,7 +22,8 @@ void print_pyramide(int space, int bricks)
 {
     for (int i = 0; i < bricks; i++)
     {
-       printf("%*s", space-bricks, "");
+       printf("%*s#", space-bricks, "");
+       printf("#");
     }
 
     printf("\n");
