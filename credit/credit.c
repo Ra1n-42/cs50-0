@@ -58,6 +58,11 @@ int main(void){
                 printf("American Express.\n");
             }
         }
+        if (digit_count == 15){
+            if ( first_two == 37 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
+                printf("American Express.\n");
+            }
+        }
     }
 
 }
