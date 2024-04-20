@@ -20,10 +20,12 @@ int main(void)
 
 void print_pyramide(int space, int bricks)
 {
-    string s;
+    int s;
     for (int i = 0; i < bricks; i++)
     {
-        printf(i);
+        s += i
+        printf("%d",i);
     }
+    
     printf("\n");
 }
