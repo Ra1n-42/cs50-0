@@ -43,7 +43,7 @@ int main(void){
         int first_two =  get_first_two_digits(num);
         int first = get_first_digit(num);
 
-        if ( digit_count <= 16 ){
+        if (digit_count == 13 || digit_count == 16 ){
             if ( first==4 ){
                 printf("VISA\n");
             }
