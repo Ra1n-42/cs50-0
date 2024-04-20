@@ -4,14 +4,29 @@
 
 int main(void)
 {
-    // int number = get_long("Number: ");
-    long credit_number = 4111111123456789;
-    long temp = credit_number;
+    long num = 371449635398431;
+    long temp = num; // Eine temporäre Variable, um die ursprüngliche Zahl nicht zu ändern
+    int digit_count = 0;
+    int sum = 0;
 
+    // Schleife, um nacheinander jede Ziffer zu betrachten
+    while (temp > 0) {
+        int digit = temp % 10; // Die aktuelle Ziffer extrahieren
+        digit_count++; // Die Anzahl der Ziffern erhöhen
+        if (digit_count % 2 == 0) { // Überprüfen, ob die Ziffer an einer "jede zweite von hinten" Position ist
+            digit *= 2; // Verdopple die Ziffer
+            if (digit > 9) { // Wenn das Ergebnis zweistellig ist, addiere die Ziffern dieses Ergebnisses
+                digit = digit / 10 + digit % 10;
+            }
+        }
+        sum += digit; // Summiere die Ziffer auf
+        temp = temp / 10; // Die aktuelle Ziffer entfernen, um zur nächsten Ziffer zu gelangen
+    }
 
-    while (temp > 0)
-    {
-
+    if (sum % 10 == 0) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
+        printf("Die Kreditkartennummer ist gültig.\n");
+    } else {
+        printf("Die Kreditkartennummer ist ungültig.\n");
     }
     // let’s first underline every other digit, starting with the number’s second-to-last digit
     // let’s multiply each of the underlined digits by 2
