@@ -34,30 +34,32 @@ int main(void){
 
     if (sum % 10 != 0 || digit_count < 13 || digit_count > 16) { // Überprüfe, ob die Summe durch 10 ohne Rest teilbar ist
         printf("INVALID\n");
-        return 1;
     }
+    else{
 
-    // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
-    // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 and all Visa numbers start with 4.
+        // card identification: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.
+        // All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 and all Visa numbers start with 4.
 
-    int first_two =  get_first_two_digits(num);
-    int first = get_first_digit(num);
+        int first_two =  get_first_two_digits(num);
+        int first = get_first_digit(num);
 
-    if (digit_count == 13 || digit_count == 16 ){
-        if ( first==4 ){
-            printf("VISA\n");
+        if (digit_count == 13 || digit_count == 16 ){
+            if ( first==4 ){
+                printf("VISA\n");
+            }
+        }
+        if (digit_count == 16){
+            if ( first_two == 34 || first_two == 37 || first_two == 22 || first_two == 55 || first_two == 51){
+                printf("MASTERCARD\n");
+            }
+        }
+        if (digit_count == 15){
+            if ( first_two == 51 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
+                printf("American Express.\n");
+            }
         }
     }
-    if (digit_count == 16){
-        if ( first_two == 34 || first_two == 37 || first_two == 22 || first_two == 55 || first_two == 51){
-            printf("MASTERCARD\n");
-        }
-    }
-    if (digit_count == 15){
-        if ( first_two == 51 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
-            printf("American Express.\n");
-        }
-    }
+
 }
 
 int get_first_digit(long number) {
