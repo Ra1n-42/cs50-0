@@ -6,7 +6,7 @@ int count_digits(long num);
 
 int main(void)
 {
-    // int number = get_int("Number: ");
+    // int number = get_long("Number: ");
     long card = 4111111123456789;
 
     // let’s first underline every other digit, starting with the number’s second-to-last digit
