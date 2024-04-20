@@ -54,9 +54,6 @@ int main(void){
             }
         }
         if (digit_count == 15){
-            if ( first_two == 51 || first_two == 52 || first_two == 53 || first_two == 54 || first_two == 55 ){
-                printf("American Express.\n");
-            }
             if ( first_two == 37 ){
                 printf("AMEX\n");
             }
