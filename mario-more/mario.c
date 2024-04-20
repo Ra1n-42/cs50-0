@@ -20,6 +20,7 @@ int main(void)
 
 void print_pyramide(int space, int bricks)
 {
+    string s;
     for (int i = 0; i < bricks; i++)
     {
        printf("%*s#", space-bricks, "");
