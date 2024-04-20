@@ -5,8 +5,9 @@ int count_digits(long num);
 
 int main(void)
 {
-    long credit_number = 4111111123456789;
     // int number = get_long("Number: ");
+    long credit_number = 4111111123456789;
+    
     int digit_count = count_digits(credit_number);
 
     // let’s first underline every other digit, starting with the number’s second-to-last digit
