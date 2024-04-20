@@ -49,7 +49,7 @@ int main(void){
         }
     }
     else if (digit_count == 16){
-        if ( first_two == 34 || first_two == 37 || first_two == 22 ){
+        if ( first_two == 34 || first_two == 37 || first_two == 22 || first_two == 55 || first_two == 51){
             printf("MasterCard.\n");
         }
     }
