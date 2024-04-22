@@ -4,5 +4,13 @@
 int main(int argc, string argv[])
 {
     // string answer = get_string("What is your name? ");
-    printf("hello, %s\n", argv[1]);
+    if (argc ==2)
+    {
+        printf("hello, %s\n", argv[1]);
+
+    }
+    else
+    {
+        printf("Hello, World");
+    }
 }
