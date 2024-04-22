@@ -18,15 +18,14 @@ int main(void)
 
 bool valid_triangle(int a, int b, int c)
 {
+    // triangles only with positive lenght
     if (a < 1 || b < 1 || c < 1 )
     {
         printf("sides should not be negative or zero\n");
         return false;
     }
-    else
-    {
-        return add_two(a, b) > c || add_two(c, b) > a || add_two(a , c) > b;
-    }
+    // calculation
+    return add_two(a, b) > c || add_two(c, b) > a || add_two(a , c) > b;
 }
 
 
