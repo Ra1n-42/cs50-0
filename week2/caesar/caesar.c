@@ -26,3 +26,5 @@ int main(int argc, string argv[])
         }
     }
 }
+
+bool is_valid_
