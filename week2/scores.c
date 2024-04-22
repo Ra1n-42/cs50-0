@@ -3,11 +3,12 @@
 
 int main(void)
 {
-    const int N = 3
+    const int N = 3;
+
     int scores[N];
     for (int i =0; i < N; i++)
     {
-        scores[i] = get_int("Score: ")
+        scores[i] = get_int("Score: ");
     }
 
 
