@@ -7,19 +7,21 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 && isdigit(argv[1])==0)
+    if (argc != 2)
     {
+        for (int i = 0; argv[1][i] != '\0'; i++)
+        {
+            if (!isdigit((unsigned char)argv[1][i]))
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+        }
         printf("Usage: ./caesar key\n");
         return 1;
     }
     int k = atoi(argv[1]);
     string text = "abc";
     printf("%i", k);
-
-    // int len = strlen(text);
-    // for (int i = 0; i < len; i++)
-    // {
-    //     printf("%c", text[i] + k);
-    // }
     printf("\n");
 }
