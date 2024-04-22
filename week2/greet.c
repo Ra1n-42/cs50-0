@@ -4,13 +4,11 @@
 int main(int argc, string argv[])
 {
     // string answer = get_string("What is your name? ");
-    if (argc ==2)
-    {
-        printf("hello, %s\n", argv[1]);
 
-    }
-    else
+    for (int i = 0; i < argc; i++)
     {
-        printf("Hello, World");
+
+        printf("%s\n", argv[i]);
     }
+
 }
