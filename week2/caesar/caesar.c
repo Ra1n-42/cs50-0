@@ -7,6 +7,7 @@
 
 int main(int argc, string argv[])
 {
+    // if only 1 argument
     if (argc != 2)
     {
         for (int i = 0; argv[1][i] != '\0'; i++)
