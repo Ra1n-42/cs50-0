@@ -25,7 +25,7 @@ int main(void)
     // Compute the Coleman-Liau index
     float index = coleman_liau_index(L, S);
 
-
+    if (index )
     printf("Grade %f\n", index);
 
     // Print the grade level
