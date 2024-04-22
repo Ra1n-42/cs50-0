@@ -29,9 +29,10 @@ void cypher_text(int k, string text)
 {
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        text[i] = (text[i] + k) % 26;
-        printf("%c\n", text[i]);
+        text[i] = (text[i] + k);
+        printf("%c", text[i]);
     }
+    printf("\n");
 }
 
 bool only_digits(string s)
