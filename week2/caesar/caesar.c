@@ -27,6 +27,7 @@ int main(int argc, string argv[])
 
 char rotate(char c, int n)
 {
+    
     if (isalpha(c) != 0)
     {
         return (c + n) ;
@@ -38,8 +39,6 @@ void cypher_text(int k, string text)
 {
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-
-
         printf("%c", rotate(text[i], k));
     }
     printf("\n");
