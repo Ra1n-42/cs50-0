@@ -23,17 +23,8 @@ int main(void)
 
     int target = get_int("Nummer: ");
 
-    int person_count = 5;
+    int count = 0;
 
-
-    for (int i = 0; i < person_count; i++)
-    {
-        if (strcmp(person[i], name) == 0)
-        {
-            printf("Person %s found.\n", name);
-            return 0;
-        }
-    }
-    printf("Person %s not found.\n", name);
-    return 1;
+    for (int i = 0; )
 }
+
