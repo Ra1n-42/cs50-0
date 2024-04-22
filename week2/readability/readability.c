@@ -26,7 +26,7 @@ int main(void)
     float index = coleman_liau_index(L, S);
 
 
-    printf("%d sentences count\n", sentences);
+    printf("Grade %f\n", index);
 
     // Print the grade level
 }
