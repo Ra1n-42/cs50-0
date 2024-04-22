@@ -7,6 +7,7 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+float coleman_liau_index(float L, float S);
 
 int main(void)
 {
@@ -19,6 +20,8 @@ int main(void)
     int sentences = count_sentences(text);
 
     // Compute the Coleman-Liau index
+    coleman_liau_index()
+
 
     printf("%d sentences count\n", sentences);
 
@@ -66,4 +69,9 @@ int count_sentences(string text)
         }
     }
     return punctuation_count;
+}
+
+float coleman_liau_index(float L, float S)
+{
+    return 0.0588 * L - 0.296 * S - 15.8;
 }
