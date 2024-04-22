@@ -3,27 +3,42 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 bool only_digits(string s);
-void cypher_text(int k, string text);
 char rotate(char c, int n);
+void encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    // take the second argument
-    string argument2 = argv[1];
-
-    // if only 1 argument
-    if (argc != 2 || !only_digits(argument2))
+    // Überprüfe, ob genau 1 Argument gegeben ist und ob es nur aus Ziffern besteht
+    if (argc != 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int k = atoi(argument2);
-    string p = get_string("plaintext: ");
-    cypher_text(k, p);
-    // printf("letter %c\n" , rotate('z', k));
 
+    // Konvertiere das Argument in eine ganze Zahl (den Schlüssel)
+    int key = atoi(argv[1]);
+
+    // Lese den Klartext vom Benutzer ein
+    string plaintext = get_string("plaintext: ");
+
+    // Verschlüssele und gib den Klartext aus
+    encrypt(plaintext, key);
+
+    return 0;
+}
+
+void encrypt(string plaintext, int key)
+{
+    printf("ciphertext: ");
+    for (int i = 0, len = strlen(plaintext); i < len; i++)
+    {
+        char encrypted_char = rotate(plaintext[i], key);
+        printf("%c", encrypted_char);
+    }
+    printf("\n");
 }
 
 char rotate(char c, int n)
@@ -45,22 +60,14 @@ char rotate(char c, int n)
     return c;
 }
 
-void cypher_text(int k, string text)
-{
-    for (int i = 0, len = strlen(text); i < len; i++)
-    {
-        printf("ciphertext: %c", rotate(text[i], k));
-    }
-    printf("\n");
-}
-
 bool only_digits(string s)
 {
     for (int i = 0, len = strlen(s); i < len; i++)
+    {
+        if (!isdigit(s[i]))
         {
-            if(!isdigit(s[i])){
-                return false;
-            }
+            return false;
         }
+    }
     return true;
 }
