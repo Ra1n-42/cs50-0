@@ -27,11 +27,12 @@ int main(int argc, string argv[])
 
 char rotate(char c, int n)
 {
-    
+    // c is letter
     if (isalpha(c) != 0)
     {
-        return (c + n) ;
+        return c + n ;
     }
+    // c not letter
     return c;
 }
 
