@@ -52,18 +52,18 @@ int count_words(string text)
     // Return the number of words in text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // printf("%c is ",text[i]);
-        if (isalpha(text[i]) == 0)
+        // letter found
+        if (isalpha(text[i]) != 0)
         {
-            // printf("not");
+
         }
-        else{
-            letters_count ++;
-            // printf("a");
-        }
-        // printf(" letter\n");
+        // else if (isspace[text[i]])
+        // {
+
+        // }
+        isspace[text[i]]
     }
-    return 1;
+    return words_count;
 }
 
 int count_sentences(string text)
