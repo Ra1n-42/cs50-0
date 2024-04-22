@@ -5,6 +5,7 @@
         "cs50.h": "c",
         "stdio.h": "c",
         "limits.h": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "ctype.h": "c"
     }
 }
