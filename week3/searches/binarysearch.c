@@ -18,7 +18,7 @@ int main(void)
         repeat, changing the start point to be just of the right of the middle.
     */
 
-    // unsorted list (doh!)
+    // unsorted list (duh!)
     int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
 
     int target = get_int("Nummer: ");
