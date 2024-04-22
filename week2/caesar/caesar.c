@@ -6,7 +6,7 @@
 
 bool only_digits(string s);
 void cypher_text(int k, string text);
-
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -23,6 +23,11 @@ int main(int argc, string argv[])
     string p = get_string("plaintext: ");
     cypher_text(k, p);
 
+}
+
+char rotate(char c, int n)
+{
+    return c + n;
 }
 
 void cypher_text(int k, string text)
