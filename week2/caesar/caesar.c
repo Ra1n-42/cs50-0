@@ -49,7 +49,7 @@ void cypher_text(int k, string text)
 {
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        printf("%c", rotate(text[i], k));
+        printf("ciphertext: %c", rotate(text[i], k));
     }
     printf("\n");
 }
