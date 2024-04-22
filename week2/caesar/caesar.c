@@ -5,21 +5,33 @@
 #include <ctype.h>
 
 bool only_digits(string s);
+void cypher_text(int k, string text);
+
 
 int main(int argc, string argv[])
 {
     // take the second argument
-    string text = argv[1];
+    string argument2 = argv[1];
 
     // if only 1 argument
-    if (argc != 2 || !only_digits(text))
+    if (argc != 2 || !only_digits(argument2))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    int k = atoi(argument2);
+    string p = get_string("plaintext: ");
+    cypher_text(k, p);
 
-    printf("%s\n", text);
+}
 
+void cypher_text(int k, string text)
+{
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        text[i] = text[i] + k;
+        printf("%c\n", text[i]);
+    }
 }
 
 bool only_digits(string s)
