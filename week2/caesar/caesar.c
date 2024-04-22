@@ -20,8 +20,9 @@ int main(int argc, string argv[])
         return 1;
     }
     int k = atoi(argument2);
-    string p = get_string("plaintext: ");
-    cypher_text(k, p);
+    // string p = get_string("plaintext: ");
+    // cypher_text(k, p);
+    printf("%c\n" ,rotate('A', k));
 
 }
 
@@ -30,7 +31,7 @@ char rotate(char c, int n)
     // c is letter
     if (isalpha(c) != 0)
     {
-        return c + n ;
+        return (c + n) / 26;
     }
     // c not letter
     return c;
