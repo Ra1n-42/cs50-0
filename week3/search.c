@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    int numbers[] = {20, 500, 10, 5, 100, 1, 50};
+    string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
 
-    int n = get_int("Number: ");
+    string s = get_string("String: ");
 
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 6; i++)
     {
-        if (numbers[i]==n)
+        if (strings[i] == s)
         {
             printf("found\n");
             return 0;
