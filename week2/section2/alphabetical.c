@@ -14,11 +14,8 @@ int main(void)
             printf("Not in alphabetical order.\n");
             return 0;
         }
-        else
-        {
-            printf("string is in alphabetical order.\n");
-            return 0;
-        }
     }
-    printf("\n");
+
+    printf("string is in alphabetical order.\n");
+    return 0;
 }
