@@ -3,8 +3,9 @@
 
 int main(void)
 {
-    int scores[3];
-    for (int i =0; i < 3; i++)
+    int top = 3
+    int scores[top];
+    for (int i =0; i < top; i++)
     {
         scores[i] = get_int("Score: ")
     }
