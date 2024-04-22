@@ -10,7 +10,7 @@ int main(void)
 {
     int side_a = 1;
     int side_b = 2;
-    int side_c = 1;
+    int side_c = 5;
 
     printf("%d\n", valid_triangle(side_a, side_b, side_c));
 }
