@@ -18,7 +18,7 @@ int main(void)
 
     for (int i = 0; i < person_count; i++)
     {
-        if (strcmp(person[i], name)==0)
+        if (strcmp(person[i], name) == 0)
         {
             printf("Person %s found.\n", name);
             return 0;
