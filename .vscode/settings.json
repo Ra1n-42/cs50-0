@@ -4,6 +4,7 @@
         "*.ejs": "html",
         "cs50.h": "c",
         "stdio.h": "c",
-        "limits.h": "c"
+        "limits.h": "c",
+        "string_view": "c"
     }
 }
