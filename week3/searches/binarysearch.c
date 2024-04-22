@@ -35,7 +35,10 @@ int main(void)
     // first sort array
     for (int i =0; i < end; i++)
     {
-        if (numbers[i] )
+        if (numbers[i] > numbers[i + 1])
+        {
+            numbers[i] = numbers[i + 1];
+        }
     }
 }
 
