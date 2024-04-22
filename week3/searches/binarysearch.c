@@ -21,7 +21,7 @@ int main(void)
         repeat, changing the start point to be just of the right of the middle.
     */
 
-    // unsorted list (duh!) 15 elements
+    // unsorted list (duh!) 15 elements (LIST MUST BE SORTED)
     int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
 
     // to searched number
@@ -32,10 +32,10 @@ int main(void)
     int end = sizeof(numbers) / sizeof(numbers[0]);
     int middle = end / 2;
 
-    for (int i = 0; i < end; i++)
+    // first sort array
+    for (int i =0; i < end; i++)
     {
-        printf("%d\n", end);
-
+        if (numbers[i] )
     }
 }
 
