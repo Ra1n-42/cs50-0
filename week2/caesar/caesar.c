@@ -22,18 +22,26 @@ int main(int argc, string argv[])
     int k = atoi(argument2);
     // string p = get_string("plaintext: ");
     // cypher_text(k, p);
-    printf("letter %c\n" , rotate('A', k));
+    printf("letter %c\n" , rotate('z', k));
 
 }
 
 char rotate(char c, int n)
 {
-    // c is letter
-    if (isalpha(c) != 0)
+    if (isalpha(c))
     {
-        return (c + n) ;
+        // Prüfe, ob der Buchstabe ein Kleinbuchstabe ist
+        if (islower(c))
+        {
+            return 'a' + (c - 'a' + n) % 26;
+        }
+        // Prüfe, ob der Buchstabe ein Großbuchstabe ist
+        else if (isupper(c))
+        {
+            return 'A' + (c - 'A' + n) % 26;
+        }
     }
-    // c not letter
+    // Wenn c kein Buchstabe ist, gib c unverändert zurück
     return c;
 }
 
