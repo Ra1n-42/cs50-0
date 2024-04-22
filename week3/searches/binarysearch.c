@@ -24,14 +24,13 @@ int main(void)
     // unsorted list (duh!)
     int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
 
-    // int target = get_int("Nummer: ");
+    int i = 0;
 
-    int size = array_len(numbers);
-
-    printf("Die Größe des Arrays ist: %d\n", size);
+    while (numbers[i]!='\n')
+    {
+        i++;
+    }
+    printf("%d\n", i);
 }
 
-int array_len(int b)
-{
-    return sizeof(b) / sizeof(b[0]);
-}
+
