@@ -6,14 +6,14 @@
 
 int main(int argc, string argv[])
 {
-    int k = (int) argv[1];
+    int k = toint(argv[1]);
     string text = "abc";
+    printf("%i", k);
 
-    int len = strlen(text);
-    for (int i = 0; i < len; i++)
-    {
-        printf("%c",text[i] + k);
-    }
-
+    // int len = strlen(text);
+    // for (int i = 0; i < len; i++)
+    // {
+    //     printf("%c", text[i] + k);
+    // }
     printf("\n");
 }
