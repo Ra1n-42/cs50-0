@@ -37,10 +37,12 @@ int main(void)
     else if (grade >=16){
         printf("Grade 16+");
     }
+    else{
 
-    printf("Grade %f\n", grade);
+        printf("Grade %i\n", (int) grade);
+    }
+    printf("\n");
 
-    // Print the grade level
 }
 
 float rounding_up(float x)
