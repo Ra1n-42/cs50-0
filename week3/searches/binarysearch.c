@@ -9,9 +9,13 @@ int main(void)
         O(log sub n)
 
         In Psudecode:
-        repeat, start at the first element
-        if the firste lement ist what you are looking for (target), stop.
-        Otherwise, move to the next element.
+        repeat, until the (sub)array is of size 0:
+        * calculate the middle point of the current (sub)array.
+        * if target is at the middle, stop.
+        * otherwise, if target is less than whats at the middle, repeat,
+        changing the end point to be just to the left od the middle.
+        * otherwise, if the target is greather than wats at the middle,
+        repeat, changing the start point to be just of the right of the middle.
     */
 
     string person[] = {"Lea", "Johnson", "Eli", "Carter", "Emily"};
