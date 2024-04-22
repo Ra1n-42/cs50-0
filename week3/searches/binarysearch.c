@@ -25,10 +25,9 @@ int main(void)
 
     int person_count = 5;
 
-    // iterating from left to right
+
     for (int i = 0; i < person_count; i++)
     {
-        // comparing every single element
         if (strcmp(person[i], name) == 0)
         {
             printf("Person %s found.\n", name);
