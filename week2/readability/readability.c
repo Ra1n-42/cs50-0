@@ -28,10 +28,11 @@ int main(void)
 int count_letters(string text)
 {
     int letters_count = 0;
+    // Return the number of letters in text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-
-        if ((text[i] == '.') || (text[i] == '!') || (text[i]=='?'))
+        // letter found
+        if (isalpha(text[i]) != 0)
         {
             letters_count ++;
         }
@@ -56,12 +57,13 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    int sentence_count = 0;
+    int punctuation_count = 0;
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (ispunct(text[i])) {
-            sentence_count ++;
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        {
+            punctuation_count++;
         }
     }
-    return sentence_count;
+    return punctuation_count;
 }
