@@ -4,11 +4,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
     // if only 1 argument
-    if (argc != 2)
+    if (argc != 2 && !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -27,4 +28,13 @@ int main(int argc, string argv[])
     }
 }
 
-bool is_valid_
+bool only_digits(string s)
+{
+    for (int i = 0, len = strlen(s); i < len; i++)
+        {
+            if(!isdigit(s[i])){
+                return false;
+            }
+        }
+    return true;
+}
