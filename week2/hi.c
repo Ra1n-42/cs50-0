@@ -3,9 +3,10 @@
 
 int main(void)
 {
-    string s = "Hi!";
-    string t = "BYE!";
+    string words[2];
 
-    printf("%s\n", s);
-    printf("%s\n", t);
+    words[0] = "HI!";
+    words[1] = "BYE!";
+
+    printf("%s\n", words);
 }
