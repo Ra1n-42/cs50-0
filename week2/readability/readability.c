@@ -20,7 +20,7 @@ int main(void)
 
     // Compute the Coleman-Liau index
 
-    printf("%d,\n", letters);
+    // printf("%d,\n", letters);
 
     // Print the grade level
 }
@@ -31,7 +31,8 @@ int count_letters(string text)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
 
-        printf("%d\n", isalpha(text[i]));
+        // printf("%d\n", isalpha(text[i]));
+        printf("%c\n", text[i]);
     }
 
     return 1;
