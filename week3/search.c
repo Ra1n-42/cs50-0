@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -9,11 +10,12 @@ int main(void)
 
     for (int i = 0; i < 6; i++)
     {
-        if (strings[i] == s)
+        if (strcmp(strings[i], s) == 0)
         {
             printf("found\n");
             return 0;
         }
     }
     printf("not found\n");
+    return 1;
 }
