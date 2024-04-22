@@ -20,6 +20,7 @@ int main(void)
 
     // Compute the Coleman-Liau index
 
+    
     // Print the grade level
 }
 
