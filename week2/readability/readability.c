@@ -28,11 +28,10 @@ int main(void)
 int count_letters(string text)
 {
     int letters_count = 0;
-    // Return the number of letters in text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        // letter found
-        if (isalpha(text[i]) != 0)
+
+        if ((text[i] == '.') || (text[i] == '!') || (text[i]=='?'))
         {
             letters_count ++;
         }
