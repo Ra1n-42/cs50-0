@@ -2,15 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+
+
+int main(int argc, string argv[])
 {
-    int k = 1;
-    string p = "abc";
-    for (int i = 0, len = strlen(p); i < len; i++)
+    int k = (int) argv[1];
+    string text = "abc";
+
+    int len = strlen(text);
+    for (int i = 0; i < len; i++)
     {
-        printf("%c", p[i] + k);
+        printf("%c",text[i] + k);
     }
+
     printf("\n");
 }
-
-char cipher 
