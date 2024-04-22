@@ -19,11 +19,11 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    float L = letters / words;/* durchschnittliche Anzahl von Buchstaben pro 100 Wörtern */
-    float S = words/ sentences;/* durchschnittliche Anzahl von Sätzen pro 100 Wörtern */
+    float L = (float) letters / words * 100;/*  the number of letters divided by the number of words, all multiplied by 100. */
+    float S = (float) sentences / words *100;/* the number of sentences divided by the number of words, all multiplied by 100 */
 
     // Compute the Coleman-Liau index
-    coleman_liau_index()
+    float index = coleman_liau_index(L, S);
 
 
     printf("%d sentences count\n", sentences);
