@@ -8,6 +8,7 @@ int main(void)
     int sequence[size];
     sequence[0] = 1;
 
+    printf("%i\n", sequence[0]);
 
     for (int i = 1; i < size; i++)
     {
