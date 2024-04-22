@@ -29,7 +29,7 @@ void cypher_text(int k, string text)
 {
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (!isspace(text[i])){
+        if (isalpha(text[i]) != 0){
             text[i] = (text[i] + k);
         }
         printf("%c", text[i]);
