@@ -1,15 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
 bool valid_triangle(int a, int b, int c);
 
 int main(void)
 {
     int side_a = 1;
     int side_b = 2;
-    int side_c = 4;
+    int side_c = 3;
 
-    printf("%c\n", valid_triangle(side_a, side_b, side_c));
+    printf("%d\n", valid_triangle(side_a, side_b, side_c));
 }
 
 
