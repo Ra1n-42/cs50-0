@@ -10,6 +10,7 @@ int main(void)
 
     for (int i = 0; i < 6; i++)
     {
+        // strcmp return 0 when ascii numbers are equals
         if (strcmp(strings[i], s) == 0)
         {
             printf("found\n");
