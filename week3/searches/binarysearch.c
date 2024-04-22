@@ -18,8 +18,10 @@ int main(void)
         repeat, changing the start point to be just of the right of the middle.
     */
 
-    string person[] = {"Lea", "Johnson", "Eli", "Carter", "Emily"};
-    string name = get_string("Name: ");
+    // unsorted list (doh!)
+    int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
+
+    int target = get_int("Nummer: ");
 
     int person_count = 5;
 
