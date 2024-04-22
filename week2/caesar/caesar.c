@@ -41,7 +41,7 @@ void encrypt(string plaintext, int key)
     printf("\n");
 }
 
-char rotate(char c, int n)
+char rotate(char c, int n) 
 {
     if (isalpha(c))
     {
