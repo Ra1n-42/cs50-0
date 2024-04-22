@@ -19,6 +19,9 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
+    float L = letters / words;/* durchschnittliche Anzahl von Buchstaben pro 100 Wörtern */
+    float S = words/ sentences;/* durchschnittliche Anzahl von Sätzen pro 100 Wörtern */
+
     // Compute the Coleman-Liau index
     coleman_liau_index()
 
