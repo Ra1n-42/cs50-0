@@ -39,6 +39,7 @@ int main(void)
         {
             numbers[i] = numbers[i + 1];
         }
+        printf("%d\n", numbers[i]);
     }
 }
 
