@@ -30,9 +30,16 @@ int count_letters(string text)
     // Return the number of letters in text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
+        printf("%c is ",text[i]);
+        if (isalpha(text[i]) == 0)
+        {
+            printf("not");
+        }
+        else{
 
-        // printf("%d\n", isalpha(text[i]));
-        printf("%c\n", text[i]);
+            printf("a");
+        }
+        printf(" letter\n");
     }
 
     return 1;
