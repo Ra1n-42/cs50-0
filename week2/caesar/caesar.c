@@ -20,9 +20,9 @@ int main(int argc, string argv[])
         return 1;
     }
     int k = atoi(argument2);
-    // string p = get_string("plaintext: ");
-    // cypher_text(k, p);
-    printf("letter %c\n" , rotate('z', k));
+    string p = get_string("plaintext: ");
+    cypher_text(k, p);
+    // printf("letter %c\n" , rotate('z', k));
 
 }
 
