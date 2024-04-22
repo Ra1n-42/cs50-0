@@ -21,16 +21,22 @@ int main(void)
         repeat, changing the start point to be just of the right of the middle.
     */
 
-    // unsorted list (duh!)
+    // unsorted list (duh!) 15 elements
     int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
 
-    int i = 0;
+    // to searched number
+    int target = 19;
 
-    while (numbers[i]!='\n')
+    // search settings
+    int start = 0;
+    int end = sizeof(numbers) / sizeof(numbers[0]);
+    int middle = end / 2;
+
+    for (int i = 0; i < end; i++)
     {
-        i++;
+        printf("%d\n", end);
+
     }
-    printf("%d\n", i);
 }
 
 
