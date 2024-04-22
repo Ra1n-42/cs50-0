@@ -32,7 +32,7 @@ int main(void)
 
     if (grade < 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1\n");
     }
     else if (grade >=16){
         printf("Grade 16+\n");
