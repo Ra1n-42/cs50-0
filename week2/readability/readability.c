@@ -8,6 +8,8 @@ int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
 float coleman_liau_index(float L, float S);
+float rounding_up(float x);
+
 
 int main(void)
 {
@@ -25,12 +27,22 @@ int main(void)
     // Compute the Coleman-Liau index
     float index = coleman_liau_index(L, S);
 
-    if (index )
-    printf("Grade %f\n", index);
+
+
+    printf("Grade %f\n", rounding_up(index));
 
     // Print the grade level
 }
 
+float rounding_up(float x)
+{
+    float fractional_part = x - floor(x);
+    if (fractional_part >= 0.5) {
+        return ceil(x);
+    } else {
+        return floor(x);
+    }
+}
 int count_letters(string text)
 {
     int letters_count = 0;
