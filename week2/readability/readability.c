@@ -57,11 +57,11 @@ int count_words(string text)
         {
 
         }
-        // else if (isspace[text[i]])
-        // {
+        // space found
+        else if (isspace(text[i]) !=0)
+        {
 
-        // }
-        isspace[text[i]]
+        }
     }
     return words_count;
 }
