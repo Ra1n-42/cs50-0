@@ -30,6 +30,7 @@ int count_letters(string text)
     // Return the number of letters in text
     for (int i = 0, len = strlen(text); i < len; i++)
     {
+        
         printf("%c\n", text[i]);
     }
 
