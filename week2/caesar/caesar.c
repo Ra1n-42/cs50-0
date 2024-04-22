@@ -8,24 +8,18 @@ bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
+    // take the second argument
+    string text = argv[1];
+
     // if only 1 argument
-    if (argc != 2 && !only_digits(argv[1]))
+    if (argc != 2 || !only_digits(text))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else{
-        string text = argv[1];
-        int len = strlen(text);
-        for (int i = 0; i < len; i++)
-        {
-            if(!isdigit(text[i])){
-                printf("Usage: ./caesar key\n");
-                return 1;
-            }
-            printf("%c\n", text[i]);
-        }
-    }
+
+    printf("%s\n", text);
+
 }
 
 bool only_digits(string s)
