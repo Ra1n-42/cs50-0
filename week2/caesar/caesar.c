@@ -30,6 +30,7 @@ void cypher_text(int k, string text)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (isalpha(text[i]) != 0){
+            if (isupper(text[i]) && text[i])
             text[i] = (text[i] + k);
         }
         printf("%c", text[i]);
