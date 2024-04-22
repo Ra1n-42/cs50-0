@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     int k = atoi(argument2);
     // string p = get_string("plaintext: ");
     // cypher_text(k, p);
-    printf("%c\n" ,rotate('A', k));
+    printf("letter %c\n" , rotate('A', k));
 
 }
 
