@@ -27,9 +27,18 @@ int main(void)
     // Compute the Coleman-Liau index
     float index = coleman_liau_index(L, S);
 
+    // rounding
+    float grade = rounding_up(index);
 
+    if (grade < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else if (grade >=16){
+        printf("Grade 16+");
+    }
 
-    printf("Grade %f\n", rounding_up(index));
+    printf("Grade %f\n", grade);
 
     // Print the grade level
 }
