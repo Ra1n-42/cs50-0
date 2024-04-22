@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int array_len(int array);
+int array_len(int b);
 
 int main(void)
 {
@@ -31,7 +31,7 @@ int main(void)
     printf("Die Größe des Arrays ist: %d\n", size);
 }
 
-int array_len(int array)
+int array_len(int b)
 {
-    return sizeof(array) / sizeof(array[0]);
+    return sizeof(b) / sizeof(b[0]);
 }
