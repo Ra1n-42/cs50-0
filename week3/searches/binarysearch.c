@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
+int array_len(int array);
+
 int main(void)
 {
     /*
@@ -21,13 +24,14 @@ int main(void)
     // unsorted list (duh!)
     int numbers[] = {11, 23, 8, 14, 30, 9, 6, 17, 22, 28, 25, 15, 7, 10, 19};
 
-    int target = get_int("Nummer: ");
+    // int target = get_int("Nummer: ");
 
-    int count = 0;
+    int size = array_len(numbers);
 
-    if (
-
-    numbers[0] ==
-    )
+    printf("Die Größe des Arrays ist: %d\n", size);
 }
 
+int array_len(int array)
+{
+    return sizeof(array) / sizeof(array[0]);
+}
