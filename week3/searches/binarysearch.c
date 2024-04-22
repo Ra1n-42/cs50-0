@@ -5,6 +5,9 @@
 int main(void)
 {
     /*
+
+        O(log sub n)
+
         In Psudecode:
         repeat, start at the first element
         if the firste lement ist what you are looking for (target), stop.
@@ -16,8 +19,10 @@ int main(void)
 
     int person_count = 5;
 
+    // iterating from left to right
     for (int i = 0; i < person_count; i++)
     {
+        // comparing every single element
         if (strcmp(person[i], name) == 0)
         {
             printf("Person %s found.\n", name);
