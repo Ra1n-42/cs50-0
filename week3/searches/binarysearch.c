@@ -12,8 +12,8 @@ int main(void)
 {
     /*
 
-        O(log sub n)
-
+        worst O(log n)
+        best  Ω(1)
         In Psudecode:
         repeat, until the (sub)array is of size 0:
         * calculate the middle point of the current (sub)array.
