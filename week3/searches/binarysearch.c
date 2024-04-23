@@ -5,6 +5,9 @@
 
 void merge(int arr[], int l, int m, int r);
 void mergeSort(int arr[], int l, int r);
+
+void binary_search(int arr[], int t);
+
 int main(void)
 {
     /*
@@ -32,11 +35,7 @@ int main(void)
     int end = sizeof(numbers) / sizeof(numbers[0]);
     int middle = end / 2;
 
-    printf("Unsorted array: \n");
-    for (int i = 0; i < end; i++)
-        printf("%d ", numbers[i]);
-    printf("\n");
-
+    // sort array with merg algorithm
     mergeSort(numbers, 0, end - 1);
 
     printf("sorted array: \n");
@@ -44,9 +43,19 @@ int main(void)
         printf("%d ", numbers[i]);
     printf("\n");
 
-    
+    binary_search(numbers, target);
 
+}
 
+void binary_search(int arr[], int t)
+{
+    int start = 0;
+    int end = sizeof(arr) / sizeof(arr[0]);
+    int middle = end / 2;
+    for (int i = 0; i < end; i++)
+    {
+        if ()
+    }
 }
 
 
