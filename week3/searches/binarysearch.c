@@ -3,8 +3,8 @@
 #include <string.h>
 
 
-int array_len(int b);
-
+void merge(int arr[], int l, int m, int r);
+void mergeSort(int arr[], int l, int r);
 int main(void)
 {
     /*
@@ -32,20 +32,7 @@ int main(void)
     int end = sizeof(numbers) / sizeof(numbers[0]);
     int middle = end / 2;
 
-    // first sort array
-    for (int i =0; i < end; i++)
-    {
-        int current = numbers[i];
-        int next = numbers[i + 1];
-        if (current > next)
-        {
-            // swap numbers
-            numbers[i] = next;
-            numbers[i + 1] = current;
-
-        }
-        printf("%d\n", numbers[i]);
-    }
+    mergeSort(numbers, 0, arr_size - 1);
 }
 
 
@@ -61,5 +48,50 @@ void mergeSort(int arr[], int l, int r) {
 
         // Zusammenführen der sortierten Halbfelder
         merge(arr, l, m, r);
+    }
+}
+
+// Merge-Funktion, um zwei sortierte Arrays zusammenzuführen
+void merge(int arr[], int l, int m, int r) {
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+
+    // Temporäre Arrays
+    int L[n1], R[n2];
+
+    // Kopiere Daten in temporäre Arrays L[] und R[]
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+
+    // Zusammenführen der temporären Arrays in arr[l..r]
+    i = 0; // Initialisierung des Index für das erste Unterray
+    j = 0; // Initialisierung des Index für das zweite Unterray
+    k = l; // Initialisierung des Index für das zusammengeführte Unterray
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Kopiere die restlichen Elemente von L[], falls vorhanden
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    // Kopiere die restlichen Elemente von R[], falls vorhanden
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
     }
 }
