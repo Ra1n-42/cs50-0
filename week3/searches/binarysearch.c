@@ -32,7 +32,17 @@ int main(void)
     int end = sizeof(numbers) / sizeof(numbers[0]);
     int middle = end / 2;
 
+    printf("Unsorted array: \n");
+    for (int i = 0; i < end; i++)
+        printf("%d ", numbers[i]);
+    printf("\n");
+
     mergeSort(numbers, 0, end - 1);
+
+    printf("sorted array: \n");
+    for (int i = 0; i < end; i++)
+        printf("%d ", numbers[i]);
+    printf("\n");
 }
 
 
