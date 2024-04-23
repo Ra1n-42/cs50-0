@@ -32,7 +32,7 @@ int main(void)
     int end = sizeof(numbers) / sizeof(numbers[0]);
     int middle = end / 2;
 
-    mergeSort(numbers, 0, arr_size - 1);
+    mergeSort(numbers, 0, end - 1);
 }
 
 
