@@ -56,10 +56,8 @@ void binary_search(int arr[], int t)
         printf("found it\n");
         return 0;
     }
-    else
-    for (int i = 0; i < end; i++)
-    {
-        if ()
+    else if (arr[middle] < t ){
+        return 0;
     }
 }
 
