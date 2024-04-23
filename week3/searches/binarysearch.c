@@ -6,7 +6,7 @@
 void merge(int arr[], int l, int m, int r);
 void mergeSort(int arr[], int l, int r);
 
-void binary_search(int arr[], int t);
+void binary_search(int arr[], int t, int size);
 
 int main(void)
 {
@@ -43,11 +43,11 @@ int main(void)
         printf("%d ", numbers[i]);
     printf("\n");
 
-    binary_search(numbers, target);
+    binary_search(numbers, target, end);
 
 }
 
-void binary_search(int arr[], int t)
+void binary_search(int arr[], int t, int size)
 {
     int start = 0;
     int end = sizeof(arr) / sizeof(arr[0]);
