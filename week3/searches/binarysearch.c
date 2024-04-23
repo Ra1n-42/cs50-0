@@ -49,7 +49,17 @@ int main(void)
 }
 
 
-int linear_sort(int a[])
-{
+// Merge-Sort-Funktion
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+        // Finden des Mittelpunkts
+        int m = l + (r - l) / 2;
 
+        // Sortieren des ersten und zweiten Halbfeldes
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+
+        // Zusammenführen der sortierten Halbfelder
+        merge(arr, l, m, r);
+    }
 }
