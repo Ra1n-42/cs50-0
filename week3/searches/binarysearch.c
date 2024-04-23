@@ -52,6 +52,11 @@ void binary_search(int arr[], int t)
     int start = 0;
     int end = sizeof(arr) / sizeof(arr[0]);
     int middle = end / 2;
+    if (arr[middle]== t){
+        printf("found it\n");
+        return 0;
+    }
+    else
     for (int i = 0; i < end; i++)
     {
         if ()
