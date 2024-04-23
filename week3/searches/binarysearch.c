@@ -39,8 +39,6 @@ int main(void)
         int next = numbers[i + 1];
         if (current > next)
         {
-
-
             // swap numbers
             numbers[i] = next;
             numbers[i + 1] = current;
@@ -51,3 +49,7 @@ int main(void)
 }
 
 
+int linear_sort(int a[])
+{
+
+}
