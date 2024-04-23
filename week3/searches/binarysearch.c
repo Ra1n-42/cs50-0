@@ -35,9 +35,16 @@ int main(void)
     // first sort array
     for (int i =0; i < end; i++)
     {
-        if (numbers[i] > numbers[i + 1])
+        int current = numbers[i];
+        int next = numbers[i + 1];
+        if (current > next)
         {
-            numbers[i] = numbers[i + 1];
+
+
+            // swap numbers
+            numbers[i] = next;
+            numbers[i + 1] = current;
+
         }
         printf("%d\n", numbers[i]);
     }
