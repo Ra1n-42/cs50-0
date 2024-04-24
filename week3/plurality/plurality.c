@@ -86,10 +86,10 @@ void print_winner(void)
 {
     // TODO
     // Find the maximum number of votes
-    // Print the candidate (or candidates) with maximum votes
     for (int i = 0; i < candidate_count; i++)
     {
-        candidates[i].votes > 
+        candidates[i].votes >
     }
+    // Print the candidate (or candidates) with maximum votes
     return;
 }
