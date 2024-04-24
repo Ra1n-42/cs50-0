@@ -92,7 +92,7 @@ void print_winner(void)
         for (int j = 0; j < candidate_count; i++)
         {
             if (i != j){
-                if(candidates[i].votes >= candidates[i].votes)
+                if(candidates[i].votes >= candidates[j].votes)
                 {
                     printf("%s >= %s\n", candidates[i].name, candidates[j].name);
                 }
