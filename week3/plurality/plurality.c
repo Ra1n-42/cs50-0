@@ -103,14 +103,6 @@ void print_winner(void)
 
         }
     }
-
-    for (int i =0; i < candidate_count; i++)
-    {
-        if (winner[i] != NULL )
-        {
-            printf("%s\n", winner[i]);
-        }
-    }
     // Print the candidate (or candidates) with maximum votes
     return;
 }
