@@ -1,9 +1,10 @@
 sort1 uses: TODO
-5000random : 
+5000random : 0.07s
 
 How do you know?: TODO
 
 sort2 uses: TODO
+0.03s
 
 How do you know?: TODO
 
