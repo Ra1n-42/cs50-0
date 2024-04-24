@@ -84,45 +84,49 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    string one_winner = NULL;
-    string multiple_winner[candidate_count];
-
     int max_votes = 0;
 
-    // Durchlaufe alle Kandidaten
+    // Finde die maximale Anzahl von Stimmen
     for (int i = 0; i < candidate_count; i++)
     {
-        // Wenn der Kandidat mehr Stimmen hat als der aktuelle Gewinner
         if (candidates[i].votes > max_votes)
         {
             max_votes = candidates[i].votes;
-            one_winner = candidates[i].name;
-        }
-        // Wenn der Kandidat genauso viele Stimmen hat wie der aktuelle Gewinner
-        else if (candidates[i].votes == max_votes)
-        {
-            // Füge den Kandidaten zum Gewinner hinzu (falls es mehrere gibt)
-            // Beachte: Hier kannst du auch eine Liste oder ein Array verwenden,
-            // wenn du mehrere Gewinner unterstützen möchtest
-            multiple_winner[i] = candidates[i].name;
         }
     }
 
-    // Gib den Gewinner aus
-    if (one_winner != NULL)
+    // Zähle, wie viele Kandidaten die maximale Anzahl von Stimmen haben
+    int winner_count = 0;
+    for (int i = 0; i < candidate_count; i++)
     {
-        printf("%s\n", one_winner);
-    }
-    else
-    {
-        for (int i =0; i < candidate_count; i++)
+        if (candidates[i].votes == max_votes)
         {
-            if (multiple_winner[i] !=NULL)
+            winner_count++;
+        }
+    }
+
+    // Gib den Gewinner aus oder alle, falls es mehrere gibt
+    if (winner_count == 1)
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (candidates[i].votes == max_votes)
             {
-                printf("%s ", multiple_winner[i]);
+                printf("%s\n", candidates[i].name);
+                return; // Beende die Funktion nachdem ein einzelner Gewinner gefunden wurde
             }
         }
-        printf("\n");
+    }
+    else // Mehrere Kandidaten mit gleicher Stimmenzahl
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (candidates[i].votes == max_votes)
+            {
+                printf("%s\n", candidates[i].name);
+            }
+        }
     }
 }
+
 
