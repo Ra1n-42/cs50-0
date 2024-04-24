@@ -84,7 +84,9 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    string winner = NULL;
+    string one_winner = NULL;
+    string multiple_winner[candidate_count];
+
     int max_votes = 0;
 
     // Durchlaufe alle Kandidaten
@@ -94,7 +96,7 @@ void print_winner(void)
         if (candidates[i].votes > max_votes)
         {
             max_votes = candidates[i].votes;
-            winner = candidates[i].name;
+            one_winner = candidates[i].name;
         }
         // Wenn der Kandidat genauso viele Stimmen hat wie der aktuelle Gewinner
         else if (candidates[i].votes == max_votes)
@@ -102,14 +104,25 @@ void print_winner(void)
             // Füge den Kandidaten zum Gewinner hinzu (falls es mehrere gibt)
             // Beachte: Hier kannst du auch eine Liste oder ein Array verwenden,
             // wenn du mehrere Gewinner unterstützen möchtest
-            winner = candidates[i].name;
+            multiple_winner[i] = candidates[i].name;
         }
     }
 
     // Gib den Gewinner aus
-    if (winner != NULL)
+    if (one_winner != NULL)
     {
         printf("%s\n", winner);
+    }
+    else
+    {
+        for (int i =0; i < candidate_count; i++)
+        {
+            if (multiple_winner[i] !=NULL)
+            {
+                printf("%s ", multiple_winner[i]);
+            }
+        }
+        printf("\n");
     }
 }
 
