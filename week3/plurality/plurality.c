@@ -111,7 +111,7 @@ void print_winner(void)
     // Gib den Gewinner aus
     if (one_winner != NULL)
     {
-        printf("%s\n", winner);
+        printf("%s\n", one_winner);
     }
     else
     {
