@@ -88,6 +88,7 @@ void print_winner(void)
     // Find the maximum number of votes
     for (int i = 0; i < candidate_count; i++)
     {
+        // candidate 1 votes > candidate 2 votes?
         candidates[i].votes >
     }
     // Print the candidate (or candidates) with maximum votes
