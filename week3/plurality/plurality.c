@@ -86,7 +86,7 @@ void print_winner(void)
 {
     int max_votes = 0;
 
-    // Finde die maximale Anzahl von Stimmen
+    // find max votes
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > max_votes)
@@ -95,7 +95,7 @@ void print_winner(void)
         }
     }
 
-    // Zähle, wie viele Kandidaten die maximale Anzahl von Stimmen haben
+    // count how many has max votes
     int winner_count = 0;
     for (int i = 0; i < candidate_count; i++)
     {
@@ -112,17 +112,19 @@ void print_winner(void)
         {
             if (candidates[i].votes == max_votes)
             {
+                // return if winner found
                 printf("%s\n", candidates[i].name);
-                return; // Beende die Funktion nachdem ein einzelner Gewinner gefunden wurde
+                return;
             }
         }
     }
-    else // Mehrere Kandidaten mit gleicher Stimmenzahl
+    else // many with same votes
     {
         for (int i = 0; i < candidate_count; i++)
         {
             if (candidates[i].votes == max_votes)
             {
+                // print all winner
                 printf("%s\n", candidates[i].name);
             }
         }
