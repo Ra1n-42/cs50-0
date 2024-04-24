@@ -11,3 +11,10 @@ How do you know?: TODO
 sort3 uses: TODO
 
 How do you know?: TODO
+
+
+
+
+5000random : 0.07s sort 1
+5000random : 0.03s sort 2
+5000random : 0.04s sort 3
