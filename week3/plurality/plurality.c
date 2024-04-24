@@ -66,14 +66,18 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    // Iterate over each candidate
     for (int i = 0; i < candidate_count; i++)
     {
+        // Check if candidate's name matches given name
         if (strcmp(candidates[i].name, name) == 0)
         {
+            // If yes, increment candidate's votes and return true
             candidates[i].votes++;
             return true;
         }
     }
+    // If no match, return false
     return false;
 }
 
@@ -81,11 +85,11 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    string winner;
-
+    // Find the maximum number of votes
+    // Print the candidate (or candidates) with maximum votes
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        candidates[i].votes > 
     }
     return;
 }
