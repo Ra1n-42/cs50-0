@@ -1,20 +1,12 @@
-sort1 uses: TODO
-5000random : 0.07s
+sort1 uses: bubble
 
-How do you know?: TODO
+How do you know?: faster than sort3 in sorted50000.txt
 
-sort2 uses: TODO
-0.03s
+sort2 uses: merge
 
-How do you know?: TODO
+How do you know?: fastest one in random50000.txt
 
-sort3 uses: TODO
+sort3 uses: linear
 
-How do you know?: TODO
+How do you know?: slower than bubble
 
-
-
-
-5000random : 0.07s sort 1
-5000random : 0.03s sort 2
-5000random : 0.04s sort 3
