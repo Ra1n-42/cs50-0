@@ -124,30 +124,26 @@ int main(int argc, string argv[])
 }
 
 
-int get_candidate(string name)
-{
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(candidates[i].name, name)==0)
-        {
-            return i;
-        }
-    }
-    return MAX_CANDIDATES + 1
-}
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-
-    if (get_candidate(name) <= MAX_CANDIDATES)
+    // Durchlaufe die Kandidaten, um den Index des Kandidaten mit dem gegebenen Namen zu finden
+    for (int i = 0; i < candidate_count; i++)
     {
-        preferences[voter][rank] = get_candidate(name)
-        return true
+        // Wenn der Name mit dem Namen eines gültigen Kandidaten übereinstimmt
+        if (strcmp(candidates[i].name, name) == 0)
+        {
+            // Aktualisiere die Präferenz des Wählers, um den Index des gefundenen Kandidaten zu speichern
+            preferences[voter][rank] = i;
+            return true; // Rückgabe von true, da die Präferenz erfolgreich aufgezeichnet wurde
+        }
     }
-    // TODO
+
+    // Wenn kein gültiger Kandidat mit dem gegebenen Namen gefunden wurde, gib false zurück
     return false;
 }
+
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
