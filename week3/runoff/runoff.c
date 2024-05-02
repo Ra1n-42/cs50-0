@@ -152,52 +152,88 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
+    // Gehe jeden Wähler durch
     for (int i = 0; i < voter_count; i++)
     {
-        int top_choice = preferences[i][0]
+        // Gehe jede Präferenz des aktuellen Wählers durch
+        for (int j = 0; j < candidate_count; j++)
+        {
+            // Erhalte den Index des Kandidaten basierend auf der aktuellen Präferenz des Wählers
+            int kandidaten_index = preferences[i][j];
 
-        if (!candidates[top_choice].eliminated){ // first choice
-            candidates[top_choice].vote++
-        }else {
-            int second_choice = preferences[i][1]
-
-            if (!candidates[second_choice].eliminated){ // second choice
-                candidates[second_choice].vote++
-            }else{
-                int third_choice = preferences[i][2]
-                if (!candidates[third_choice].eliminated){ // third choice
-                    candidates[third_choice].vote++
-                }
-
+            // Wenn der Kandidat nicht eliminiert ist, erhöhe die Anzahl ihrer Stimmen
+            if (!candidates[kandidaten_index].eliminated)
+            {
+                candidates[kandidaten_index].votes++;
+                break; // Hör auf, Stimmen für diesen Wähler zu zählen, nachdem du die Stimmen für den am höchsten gerankten nicht eliminierten Kandidaten aktualisiert hast
             }
-
         }
-
     }
-    // TODO
-    return;
 }
+
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    // Berechne die Anzahl der Stimmen, die benötigt werden, um die Wahl zu gewinnen
+    int votes_needed_to_win = voter_count / 2 + 1;
+
+    // Gehe jeden Kandidaten durch
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Wenn ein Kandidat mehr als die Hälfte der Stimmen hat, drucke seinen Namen und gib true zurück
+        if (candidates[i].votes > votes_needed_to_win)
+        {
+            printf("%s\n", candidates[i].name);
+            return true;
+        }
+    }
+
+    // Wenn kein Kandidat mehr als die Hälfte der Stimmen hat, gib false zurück
     return false;
 }
+
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
-    return 0;
+    // Setze die minimale Stimmenanzahl auf einen großen Wert
+    int min_votes = MAX_VOTERS;
+
+    // Gehe jeden Kandidaten durch
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Überprüfe, ob der Kandidat noch im Rennen ist und ob seine Stimmenanzahl kleiner als die bisherige minimale Stimmenanzahl ist
+        if (!candidates[i].eliminated && candidates[i].votes < min_votes)
+        {
+            // Wenn ja, aktualisiere die minimale Stimmenanzahl
+            min_votes = candidates[i].votes;
+        }
+    }
+
+    // Gib die minimale Stimmenanzahl zurück
+    return min_votes;
 }
+
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    return false;
+    // Gehe jeden Kandidaten durch
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Überprüfe, ob der Kandidat nicht eliminiert ist und ob seine Stimmenanzahl nicht gleich dem Minimum ist
+        if (!candidates[i].eliminated && candidates[i].votes != min)
+        {
+            // Wenn ja, gibt es keine Gleichheit, also gib false zurück
+            return false;
+        }
+    }
+
+    // Wenn alle verbleibenden Kandidaten die gleiche Anzahl von Stimmen haben, gib true zurück
+    return true;
 }
+
 
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
