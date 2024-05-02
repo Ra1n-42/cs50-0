@@ -126,14 +126,25 @@ int main(int argc, string argv[])
 
 int get_candidate(string name)
 {
-    for (int i = 0, i < )
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(candidates[i].name, name)==0)
+        {
+            return i;
+        }
+    }
+    return MAX_CANDIDATES + 1
 }
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
 
-    preferences[voter][rank] =
+    if (get_candidate(name) <= MAX_CANDIDATES)
+    {
+        preferences[voter][rank] = get_candidate(name)
+        return true
+    }
     // TODO
     return false;
 }
