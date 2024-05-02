@@ -185,9 +185,10 @@ bool print_winner(void)
         }
     }
 
-    // Wenn kein Kandidat mehr als die Hälfte der Stimmen hat, gib false zurück
+    // Wenn kein Kandidat die Mehrheit hat, gib false zurück
     return false;
 }
+
 
 
 // Return the minimum number of votes any remaining candidate has
