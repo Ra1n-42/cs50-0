@@ -123,10 +123,16 @@ int main(int argc, string argv[])
     return 0;
 }
 
+
+int get_candidate(string name)
+{
+    for (int i = 0, i < )
+}
+
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    
+
     preferences[voter][rank] =
     // TODO
     return false;
