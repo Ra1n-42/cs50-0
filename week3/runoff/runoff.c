@@ -158,6 +158,8 @@ void tabulate(void)
 
         if (!candidates[top_choice].eliminated){
             candidates[top_choice].vote++
+        }else {
+            
         }
 
     }
