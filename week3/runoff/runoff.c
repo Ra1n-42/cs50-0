@@ -180,7 +180,7 @@ bool print_winner(void)
         // Wenn ein Kandidat mehr als die Hälfte der Stimmen hat, drucke seinen Namen und gib true zurück
         if (candidates[i].votes > votes_needed_to_win)
         {
-            printf("%s\n", candidates[i].name);
+            printf("%s", candidates[i].name);
             return true;
         }
     }
