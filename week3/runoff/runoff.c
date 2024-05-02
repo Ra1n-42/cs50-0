@@ -156,10 +156,21 @@ void tabulate(void)
     {
         int top_choice = preferences[i][0]
 
-        if (!candidates[top_choice].eliminated){
+        if (!candidates[top_choice].eliminated){ // first choice
             candidates[top_choice].vote++
         }else {
-            
+            int second_choice = preferences[i][1]
+
+            if (!candidates[second_choice].eliminated){ // second choice
+                candidates[second_choice].vote++
+            }else{
+                int third_choice = preferences[i][2]
+                if (!candidates[third_choice].eliminated){ // third choice
+                    candidates[third_choice].vote++
+                }
+
+            }
+
         }
 
     }
