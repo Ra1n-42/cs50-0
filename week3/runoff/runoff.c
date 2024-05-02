@@ -155,7 +155,11 @@ void tabulate(void)
     for (int i = 0; i < voter_count; i++)
     {
         int top_choice = preferences[i][0]
-        candidates[top_choice].vote++
+
+        if (!candidates[top_choice].eliminated){
+            candidates[top_choice].vote++
+        }
+
     }
     // TODO
     return;
