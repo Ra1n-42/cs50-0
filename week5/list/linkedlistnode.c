@@ -3,6 +3,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+#if 0
+    Inserting and Unloading a Linked List
+
+1.  TODO: implement code to add a node to linkedlist.
+    Ensure that list always points to the head of the linked list.
+    Also ensure your new node contains a phrase.
+2.  TODO: implement unload such that all nodes in the linked
+    list are free'd when the function is called.Return true when
+    successfull.
+#endif
+
 typedef struct node
 {
     string phrase;
