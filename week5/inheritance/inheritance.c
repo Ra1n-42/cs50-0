@@ -58,8 +58,8 @@ person *create_family(int generations)
         new_person->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        new_person->allels[0] = parent0->alleles[rand() % 2]
-        new_person->allels[1] = parent1->alleles[rand() % 2]
+        new_person->alleles[0] = parent0->alleles[rand() % 2];
+        new_person->alleles[1] = parent1->alleles[rand() % 2];
     }
 
     // If there are no generations left to create
@@ -70,8 +70,8 @@ person *create_family(int generations)
         new_person->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-        new_person->allels[0] = random_allele();
-        new_person->allels[1] = random_allele();
+        new_person->alleles[0] = random_allele();
+        new_person->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
