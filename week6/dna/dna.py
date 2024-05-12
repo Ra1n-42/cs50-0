@@ -39,7 +39,7 @@ def main():
             match_found = True
 
     if not match_found:
-        print("No match found")
+        print("No match")
 
     return
 
