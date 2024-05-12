@@ -1,0 +1,2 @@
+
+cents = input("Change: ")
