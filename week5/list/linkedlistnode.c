@@ -36,15 +36,21 @@ int main(void)
         string phrase = get_string("Enter a new phrase: ");
 
         // TODO: add phrase to new node in list
+
+        // create new node with name of n and malloc the size of node
         node *n = malloc(sizeof(node));
 
+        // if node is empty return 1
         if (n == NULL)
         {
             return 1;
         }
+        // set n node.phrase to phrase
         n->phrase = phrase;
+        // set n node.next to NULL
         n->next = NULL;
 
+        // 
         n->next = list;
         list = n;
 
@@ -66,12 +72,16 @@ int main(void)
 bool unload(node *list)
 {
     // TODO: Free all allocated nodes
-    node *ptr = list;
+    node *ptr = list; // copy list node with pointer(ptr)
 
+    // do loop, while there is no more pointer to list->next
     while (ptr != NULL)
     {
+        // ptr equals what list node in next
         ptr = list->next;
+        // free memory on list
         free(list);
+        // list equals pointer of list->next
         list = ptr;
     }
 
