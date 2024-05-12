@@ -52,4 +52,4 @@ if grade < 1:
 elif grade >= 16:
     print("Grade 16+")
 else:
-    print("Grade", int(grade)-1)
+    print("Grade", int(grade))
