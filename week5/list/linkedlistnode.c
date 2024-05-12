@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <cs50.h>
 
 typedef struct node
 {
-    char *phrase;
+    string phrase;
     struct node *next;
 } node;
 
