@@ -1,7 +1,5 @@
 
 
 height = input("Height: ")
-block = ""
-for i in range(int(height)):
-    block += "#"
-    print(block)
+for i in range(1, int(height)+1):
+    print("#"*i)
