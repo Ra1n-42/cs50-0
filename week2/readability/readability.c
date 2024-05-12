@@ -21,9 +21,7 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    // printf("letters %i\n", letters);
-    // printf("words %i\n", words);
-    // printf("sentences %i\n", sentences);
+    printf("letters %i, words %i, sentences %i\n", letters, words, sentences);
 
     float L = (float) letters / words * 100;/*  the number of letters divided by the number of words, all multiplied by 100. */
     float S = (float) sentences / words *100;/* the number of sentences divided by the number of words, all multiplied by 100 */
