@@ -28,6 +28,7 @@ int main(void)
 
     // Compute the Coleman-Liau index
     float index = coleman_liau_index(L, S);
+    printf("L %f, S %f, index %f\n", L, S, index);
 
     // rounding
     float grade = rounding_up(index);
