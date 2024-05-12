@@ -8,10 +8,7 @@ def count_letters(text):
     return letter_count
 
 def count_words(text):
-    words_count = 0
-    for char in text:
-        if char == " ":
-            words_count += 1
+    words_count = text.count(' ') + 1
     return words_count
 
 def count_sentences(text):
@@ -38,14 +35,14 @@ letters = count_letters(text)
 words = count_words(text)
 sentences = count_sentences(text)
 
-print(f"letters: {letters} words: {words} sentences: {sentences}")
+# print(f"letters: {letters} words: {words} sentences: {sentences}")
 
 L = (letters / words) * 100
 S = (sentences / words) * 100
 
 # Compute the Coleman-Liau index
 index = coleman_liau_index(L, S)
-print(f"L: {L} S: {S} Index: {index}")
+# print(f"L: {L} S: {S} Index: {index}")
 # Rounding
 grade = rounding_up(index)
 
