@@ -4,7 +4,6 @@
 while True:
     height_input = input("Height: ")
 
-
     if height_input.isdigit():
         height = int(height_input)
 
