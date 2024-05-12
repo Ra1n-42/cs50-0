@@ -12,16 +12,19 @@ def main():
     print(commandline)
 
     # TODO: Read database file into a variable
+    DATABASE = ]
     with open(commandline[1], newline='') as csvfile:
         database = csv.DictReader(csvfile)
 
         for row in database:
-            print(row)
+            print(row["name"])
     # TODO: Read DNA sequence file into a variable
+    sequence = ""
     with open(commandline[2], newline='') as csvfile:
         sequence = csvfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    print(sequence)
     # TODO: Check database for matching profiles
 
     return
