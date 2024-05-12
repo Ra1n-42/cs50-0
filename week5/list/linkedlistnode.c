@@ -20,7 +20,7 @@ int main(void)
     n->next = NULL;
     list = n;
 
-    printf("%s\n", *list[0]);
+    printf("%s\n", list[0]);
 
     return 0;
 }
