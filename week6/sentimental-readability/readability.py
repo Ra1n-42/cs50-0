@@ -38,6 +38,8 @@ letters = count_letters(text)
 words = count_words(text)
 sentences = count_sentences(text)
 
+print(f"letters: {letters} words: {words} sentences: {sentences}")
+
 L = (letters / words) * 100
 S = (sentences / words) * 100
 
