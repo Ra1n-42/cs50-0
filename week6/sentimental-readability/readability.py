@@ -45,7 +45,7 @@ S = (sentences / words) * 100
 
 # Compute the Coleman-Liau index
 index = coleman_liau_index(L, S)
-
+print(f"L: {L} S: {S} Index: {index}")
 # Rounding
 grade = rounding_up(index)
 
