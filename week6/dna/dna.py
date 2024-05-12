@@ -9,7 +9,6 @@ def main():
     if len(commandline)-1 != 2 :
         print("need 2 arguments")
         return
-    print(commandline)
 
     # TODO: Read database file into a variable
     DATABASE = []
@@ -24,7 +23,7 @@ def main():
         sequence = csvfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+
     # TODO: Check database for matching profiles
 
     return
