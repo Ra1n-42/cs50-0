@@ -11,7 +11,7 @@ def main():
         return
 
     # TODO: Read database file into a variable
-    with open(commandline[0], newline='') as csvfile:
+    with open(commandline[1], newline='') as csvfile:
         database = csv.DictReader(csvfile)
 
         for row in database:
