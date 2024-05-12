@@ -35,7 +35,7 @@ def main():
                 match = False
                 break
         if match:
-            print(f"Match found: {person['name']}")
+            print(f"{person['name']}")
             match_found = True
 
     if not match_found:
