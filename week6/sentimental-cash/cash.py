@@ -1,2 +1,6 @@
+import cs50
 
-cents = input("Change: ")
+
+cents = cs50.get_float("Change: ")
+
+print(cents)
