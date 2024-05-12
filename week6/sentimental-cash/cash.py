@@ -26,5 +26,3 @@ while True:
         total_coins = quarters + dimes + nickels + pennies
         print(total_coins)
         break
-    else:
-        print("Please enter a valid positive amount for change.")
