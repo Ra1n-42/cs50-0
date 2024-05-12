@@ -1,62 +1,30 @@
 import cs50
 
-def calculate_quarters(cents):
-    __quarters = 25
-    if cents == __quarters: return 1
-
-    quaters = 0
-    while cents >= __quarters:
-        quaters += 1
-        cents -= __quarters
-    return quaters
-
-def calculate_dimes(cents):
-    __dimes = 10
-    if cents == __dimes: return 1
-
-    dimes = 0
-    while cents >= __dimes:
-        dimes += 1
-        cents -= __dimes
-    return dimes
-
-def calculate_nickels(cents):
-    __nickels = 5
-    if cents == __nickels: return 1
-
-    nickels = 0
-    while cents >= __nickels:
-        nickels += 1
-        cents -= __nickels
-    return nickels
-
-def calculate_pennies(cents):
-    pennies = 0
-    while cents >= 1:
-        pennies += 1
-        cents -= 1
-    return pennies
+def calculate_coins(cents, coin_value):
+    coins = 0
+    while cents >= coin_value:
+        coins += 1
+        cents -= coin_value
+    return coins
 
 while True:
-    cents = cs50.get_float("Change: ")
+    dollars = cs50.get_float("Change: ")
 
-    if cents > 0:
+    if dollars is not None and dollars > 0:
+        cents = round(dollars * 100)  # Convert dollars to cents
+        quarters = calculate_coins(cents, 25)
+        cents -= quarters * 25
 
-        quaters = calculate_quarters(cents)
-        print("quaters ", quaters)
-        cents -= quaters * 25
-        dimes = calculate_dimes(cents)
-        print("dimes ", dimes)
+        dimes = calculate_coins(cents, 10)
         cents -= dimes * 10
-        nickels = calculate_nickels(cents)
-        print("nickels ", nickels)
+
+        nickels = calculate_coins(cents, 5)
         cents -= nickels * 5
-        pennies = calculate_pennies(cents)
-        print("pennies ", pennies)
-        cents -= pennies
-        sum = quaters + dimes + nickels + pennies
 
-        print(sum)
+        pennies = cents
+
+        total_coins = quarters + dimes + nickels + pennies
+        print(total_coins)
         break
-
-
+    else:
+        print("Please enter a valid positive amount for change.")
