@@ -14,10 +14,14 @@ def main():
     with open(commandline[1], newline='') as csvfile:
         database = csv.DictReader(csvfile)
 
-        for row in database:
-            print(row)
+        # for row in database:
+        #     print(row)
     # TODO: Read DNA sequence file into a variable
+    with open(commandline[2], newline='') as csvfile:
+        sequence = csv.DictReader(csvfile)
 
+        for row in sequence:
+            print(row)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
