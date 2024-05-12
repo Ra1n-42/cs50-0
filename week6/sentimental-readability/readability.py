@@ -10,7 +10,7 @@ def count_letters(text):
 def count_words(text):
     words_count = 0
     for char in text:
-        if char.isspace():
+        if char == " ":
             words_count += 1
     return words_count
 
