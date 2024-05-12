@@ -1,5 +1,7 @@
 
 
 height = int(input("Height: "))
-for i in range(1, height+1):
-    print(" "*(height-i)+"#"*i)
+
+print()
+# for i in range(1, height+1):
+#     print(" "*(height-i)+"#"*i)
