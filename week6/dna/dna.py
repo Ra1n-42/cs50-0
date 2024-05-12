@@ -5,10 +5,11 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    commandline = sys.argv[0:-1]
-    if len(commandline)!=2:
-        print("python file arg1 arg2")
+    commandline = sys.argv
+    if len(commandline)-1 != 2 :
+        print("need 2 arguments")
         return
+    print(commandline)
 
     # TODO: Read database file into a variable
     with open(commandline[1], newline='') as csvfile:
@@ -18,10 +19,9 @@ def main():
         #     print(row)
     # TODO: Read DNA sequence file into a variable
     with open(commandline[2], newline='') as csvfile:
-        sequence = csv.DictReader(csvfile)
+        sequence = csvfile.read()
 
-        for row in sequence:
-            print(row)
+        print(sequence)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
