@@ -43,15 +43,20 @@ while True:
     if cents > 0:
 
         quaters = calculate_quarters(cents)
+        print("quaters ", quaters)
         cents -= quaters * 25
         dimes = calculate_dimes(cents)
+        print("dimes ", dimes)
         cents -= dimes * 10
         nickels = calculate_nickels(cents)
+        print("nickels ", nickels)
         cents -= nickels * 5
         pennies = calculate_pennies(cents)
+        print("pennies ", pennies)
         cents -= pennies
         sum = quaters + dimes + nickels + pennies
 
         print(sum)
+        break
 
 
