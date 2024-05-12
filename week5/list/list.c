@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
             // This node is the whole list
             list = n;
         }
+        
         // If list hast numbers already
         else
         {
