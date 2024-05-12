@@ -38,7 +38,13 @@ int main(int argc, char *argv[])
             list = n;
         }
 
-        // If list hast numbers already
+        // If number belongs at beginning of list
+        else if (n->number < list->number)
+        {
+            n->next =list;
+            list = n;
+        }
+        // If number belongs later in list
         else
         {
             // Iterate over nodes in list
