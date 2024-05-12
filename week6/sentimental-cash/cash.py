@@ -40,3 +40,18 @@ def calculate_pennies(cents):
 while True:
     cents = cs50.get_float("Change: ")
 
+    if cents > 0:
+
+        quaters = calculate_quarters(cents)
+        cents -= quaters * 25
+        dimes = calculate_dimes(cents)
+        cents -= dimes * 10
+        nickels = calculate_nickels(cents)
+        cents -= nickels * 5
+        pennies = calculate_pennies(cents)
+        cents -= pennies
+        sum = quaters + dimes + nickels + pennies
+
+        print(sum)
+
+
