@@ -23,9 +23,9 @@ To be clear, then, here’s how encrypting `HELLO` with a key of
 ```markdown
 | Plaintext | = ciphertext 
 | --------- | 
-| H         | `I`
-| E         | `F`
-| L         | `M`
-| L         | `M`
-| O         | `P`
+| H         | 'I'
+| E         | 'F'
+| L         | 'M'
+| L         | 'M'
+| O         | 'P'
 ```
