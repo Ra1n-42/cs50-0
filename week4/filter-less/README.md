@@ -1,26 +1,34 @@
 # Problem to Solve: Image Filtering
+## Filter
 ![Yard Grayscale](https://cs50.harvard.edu/x/2024/psets/4/filter/less/yard-grayscale.bmp)
 
-## Introduction
+## Problem to Solve
+Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.
 
-Images can be represented as grids of pixels, each pixel containing information about its color. For black-and-white images, a single bit suffices per pixel, with 0 representing black and 1 representing white. More colorful images require more bits per pixel, such as the commonly used 24-bit color format, which uses 8 bits each for red, green, and blue (RGB) components.
+![Bitmap](https://cs50.harvard.edu/x/2024/psets/4/filter/less/bitmap.png)
 
-In this problem, you'll be working with 24-bit BMP (Bitmap) images. These images consist of sequences of bits, with each group of 24 bits representing the color of a pixel. The color of each pixel is determined by the amount of red, green, and blue present, commonly known as RGB color.
+A 24-bit BMP uses 8 bits to signify the amount of red in a pixel’s color, 8 bits to signify the amount of green in a pixel’s color, and 8 bits to signify the amount of blue in a pixel’s color. If you’ve ever heard of RGB color, well, there you have it: red, green, blue.
 
-## Technical Background
+If the R, G, and B values of some pixel in a BMP are, say, 0xff, 0x00, and 0x00 in hexadecimal, that pixel is purely red, as 0xff (otherwise known as 255 in decimal) implies “a lot of red,” while 0x00 and 0x00 imply “no green” and “no blue,” respectively. In this problem, you’ll manipulate these R, G, and B values of individual pixels, ultimately creating your very own image filters.
 
-A 24-bit BMP file contains metadata in the form of headers, followed by the bitmap data representing the image. The metadata includes information like the image's height and width. The bitmap data consists of bytes, with each triplet of bytes representing a pixel's color. Notably, BMP files store colors as BGR (blue, green, red) instead of RGB.
+In a file called helpers.c in a folder called filter-less, write a program to apply filters to BMPs.
 
-## Image Filtering
+## Background
 
-Filtering an image involves modifying each pixel to create a specific effect in the resulting image. This modification can include adjustments to color, brightness, contrast, or applying various visual effects.
+### A Bit(map) More Technical
 
-## Task
+Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel’s color. But a BMP file also contains some “metadata,” information like an image’s height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as “headers,” not to be confused with C’s header files. (Incidentally, these headers have evolved over time. This problem uses the latest version of Microsoft’s BMP format, 4.0, which debuted with Windows 95.)
 
-Your task is to write a program in a file named `helpers.c` in a folder called `filter-less` to apply filters to BMP images. These filters will manipulate the RGB values of individual pixels, allowing you to create custom image effects.
+The first of these headers, called `BITMAPFILEHEADER`, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel’s color. However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image’s top row at the end of the BMP file. But we’ve stored this problem set’s BMPs as described herein, with each bitmap’s top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies red and `ffffff` signifies white; we’ve highlighted in red all instances of `0000ff`.
 
-## Conclusion
+![red smile](https://cs50.harvard.edu/x/2024/psets/4/filter/less/red_smile.png)
 
-Understanding image representation and manipulation is crucial for various applications, including digital image processing, computer graphics, and multimedia systems. By completing this task, you'll gain practical experience in working with image data and applying filters to achieve desired visual effects.
+Because we’ve presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back.
 
-Good luck with implementing your image filters!
+To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111` in binary.
+
+Notice that you could represent a bitmap as a 2-dimensional array of pixels: where the image is an array of rows, each row is an array of pixels. Indeed, that’s how we’ve chosen to represent bitmap images in this problem.
+
+### Image Filtering
+
+What does it even mean to filter an image? You can think of filtering an image as taking the pixels of some original image, and modifying each pixel in such a way that a particular effect is apparent in the resulting image.
