@@ -48,21 +48,20 @@ Your task is to write a program that will take a sequence of DNA and a CSV file 
   - For instance, if a file like foo.csv has a header row, wherein each string is the name of some field, here’s how you might print those fieldnames as a list:
     ```markdown
     import csv
-
-with open("foo.csv") as file:
-    reader = csv.DictReader(file)
-    print(reader.fieldnames)
+    with open("foo.csv") as file:
+        reader = csv.DictReader(file)
+        print(reader.fieldnames)
     ```
     - And here’s how you read all of the (other) rows from a CSV into a `list`, wherein each element is a `dict` that represents that row:
     ```markdown
-        import csv
+    import csv
 
-        rows = []
-        with open("foo.csv") as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                rows.append(row)
-        ```
+    rows = []
+    with open("foo.csv") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            rows.append(row)
+    ```
 - The `open` and `read` functions might also prove useful for reading text files into memory.
 - Consider what data structures might be helpful for keeping tracking of information in your program. A `list` or a `dict` may prove useful.
 - Remember we’ve defined a function (`longest_match`) that, given both a DNA sequence and an STR as inputs, returns the maximum number of times that the STR repeats. You can then use that function in other parts of your program!
