@@ -1,6 +1,5 @@
 ## [CS50’s Introduction to Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
 
-- Week 0 Scratch
 - Week 1 C
 - Week 2 Arrays
 - Week 3 Algorithms
