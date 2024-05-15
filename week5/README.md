@@ -12,10 +12,10 @@ Welcome to Problem Set 5! This problem set focuses on inheritance and data struc
    - When prompted, click "Rebuild now" to ensure everything is set up correctly.
 
 2. **Submit Inheritance:**
-   - Implement the Inheritance program according to the specifications provided.
+   - Implement the `Inheritance` program according to the specifications provided.
 
 3. **Submit Speller:**
-   - Implement the Speller program according to the specifications provided.
+   - Implement the `Speller` program according to the specifications provided.
 
 ## Submission Guidelines:
 - Ensure that your code adheres to the requirements specified in the problem set instructions.
