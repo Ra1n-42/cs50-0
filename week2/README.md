@@ -2,6 +2,8 @@
 
 Welcome to Problem Set 2! This problem set continues to build on your programming skills and understanding of the C language. Below are the steps you need to follow to complete this problem set.
 
+### Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Command-Line Arguments. Cryptography.
+
 ## Instructions:
 
 1. **Access CS50 Environment:**

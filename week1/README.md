@@ -2,6 +2,8 @@
 
 Welcome to Problem Set 1! This problem set is designed to help you get familiar with the CS50 environment and basic programming concepts. Below are the steps you need to follow to complete this problem set.
 
+### C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studio Code. Syntax Highlighting. Escape Sequences. Header Files. Libraries. Manual Pages. Types. Conditionals. Variables. Loops. Linux. Graphical User Interface (GUI). Command-Line Interface (CLI). Constants. Comments. Pseudocode. Operators. Integer Overflow. Floating-Point Imprecision.
+
 ## Instructions:
 
 1. **Access CS50 Environment:**
