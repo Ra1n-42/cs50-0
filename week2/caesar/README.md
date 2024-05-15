@@ -30,4 +30,4 @@ To be clear, then, here’s how encrypting `HELLO` with a key of
 | O         | 'P'
 ```
 More formally, Caesar’s algorithm (i.e., cipher) encrypts messages by “rotating” each letter by `k` positions. More formally, if `p` is
-some plaintext (i.e., an unencrypted message), `pi` is the \( \text{i}^{th} \)
+some plaintext (i.e., an unencrypted message), `pi` is the i<sup>th</sup>
