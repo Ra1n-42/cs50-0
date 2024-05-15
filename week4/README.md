@@ -2,6 +2,8 @@
 
 Welcome to Problem Set 4! This problem set focuses on file I/O and introduces you to image processing concepts. Below are the steps you need to follow to complete this problem set.
 
+### Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Overflow. File I/O. Images.
+
 ## Instructions:
 
 1. **Access CS50 Environment:**
