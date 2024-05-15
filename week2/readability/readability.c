@@ -21,11 +21,14 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
+    printf("letters %i, words %i, sentences %i\n", letters, words, sentences);
+
     float L = (float) letters / words * 100;/*  the number of letters divided by the number of words, all multiplied by 100. */
     float S = (float) sentences / words *100;/* the number of sentences divided by the number of words, all multiplied by 100 */
 
     // Compute the Coleman-Liau index
     float index = coleman_liau_index(L, S);
+    printf("L %f, S %f, index %f\n", L, S, index);
 
     // rounding
     float grade = rounding_up(index);
