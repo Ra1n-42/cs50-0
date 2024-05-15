@@ -55,13 +55,13 @@ with open("foo.csv") as file:
     ```
     - And here’s how you read all of the (other) rows from a CSV into a `list`, wherein each element is a `dict` that represents that row:
     ```markdown
-    import csv
+        import csv
 
-rows = []
-with open("foo.csv") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        rows.append(row)
+        rows = []
+        with open("foo.csv") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                rows.append(row)
         ```
 - The `open` and `read` functions might also prove useful for reading text files into memory.
 - Consider what data structures might be helpful for keeping tracking of information in your program. A `list` or a `dict` may prove useful.
