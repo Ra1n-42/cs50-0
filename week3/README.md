@@ -2,9 +2,7 @@
 
 Welcome to Problem Set 3! This problem set delves deeper into your programming skills and introduces you to more complex algorithms and data structures. Below are the steps you need to follow to complete this problem set.
 
-### Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, Merge Sort. Asymptotic Notation: O,Ω, <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi mathvariant="normal">&#x398;</mi>
-</math>
+### Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, Merge Sort. Asymptotic Notation: O,Ω,Θ. Recursion.
 
 ## Instructions:
 
