@@ -5,9 +5,9 @@ Welcome to Problem Set 1! This problem set is designed to help you get familiar 
 ## Instructions:
 
 1. **Access CS50 Environment:**
-   - Log into submit.cs50.io using your GitHub account.
+   - Log into `submit.cs50.io` using your GitHub account.
    - Click on "Authorize cs50" and then close the tab.
-   - Log into cs50.dev using your GitHub account to access your personal "codespace."
+   - Log into `cs50.dev` using your GitHub account to access your personal "codespace."
 
 2. **Prepare Your Codespace:**
    - Once your codespace has loaded, close any Welcome tabs that may have opened by default.
