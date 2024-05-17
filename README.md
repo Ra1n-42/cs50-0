@@ -4,7 +4,7 @@ This course was quite the adventure into the world of computer science from Harv
 offered through edX. From learning the basics of programming in C to exploring advanced topics like 
 artificial intelligence and cybersecurity, it was a journey filled with learning and challenges!
 
-Weeks and Topics:
+## Weeks and Topics:
 - Week 1: Getting started with C
 - Week 2: Exploring Arrays
 - Week 3: Diving into Algorithms
