@@ -1,0 +1,22 @@
+HTML TAGS
+<nav />
+<ul />
+<li />
+<main />
+<img />
+<a />
+<button />
+<h1 />
+<h3 />
+<h5 />
+
+CSS properties
+- text-decoration
+- align-items
+- justify-content
+- border-radius
+- font-weight
+
+
+I used JavaScript in the onclick event of a button,
+and I used Bootstrap by including the respective style in the class name.

@@ -1,0 +1,9 @@
+Purple: This aura color pairs well with passionate music listeners. Purple auras tune in to get amped up, entertained, and moving while they navigate the twists and turns of their day.
+
++------------------+------------+---------+--------------+-----------------+-------------+-----------+------------------+
+| avg_danceability | avg_energy | avg_key | avg_loudness | avg_speechiness | avg_valence | avg_tempo | avg_duration_min |
++------------------+------------+---------+--------------+-----------------+-------------+-----------+------------------+
+| 0.71646          | 0.65906    | 5.33    | -5.67764     | 0.115569        | 0.484443    | 119.90418 | 3.420113         |
++------------------+------------+---------+--------------+-----------------+-------------+-----------+------------------+
+
+The top 100 songs may not represent the full diversity of the listener's musical tastes, as they only reflect the most frequently played songs.

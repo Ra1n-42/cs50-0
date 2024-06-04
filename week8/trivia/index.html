@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the aproximate ratio of people to sheep in New Zealand?</h3>
+                <button onclick="answerButton(event,false)">6 people per 1 sheep</button>
+                <button onclick="answerButton(event,false)">3 people per 1 sheep</button>
+                <button onclick="answerButton(event,false)">1 person per 1 sheep</button>
+                <button onclick="answerButton(event,false)">1 person per 3 sheep</button>
+                <button onclick="answerButton(event,true)">1 person per 6 sheep</button>
+                <div class="answer_field1"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type="text"></input>
+                <button onclick="answerButton2(event)">Check Answer</button>
+                <div class="answer_field2"></div>
+            </div>
+        </div>
+        <script>
+            function answerButton(e, bool){
+                if (!bool){
+                    let bg_color = e.target.style.backgroundColor = "red";
+                    document.querySelector(".answer_field1").innerHTML = "Incorrect";
+                }else{
+                    let bg_color = e.target.style.backgroundColor = "green";
+                    document.querySelector(".answer_field1").innerHTML = "Correct!";
+                }
+            }
+            function answerButton2(event){
+                let button = event.target;
+                let inputfield = document.querySelector("input");
+                let answer_f2 = document.querySelector(".answer_field2")
+                if (inputfield.value==="Switzerland"){
+                    answer_f2.innerHTML = "Correct!";
+                    button.style.backgroundColor = "green";
+                }else{
+                    answer_f2.innerHTML = "Incorrect";
+                    button.style.backgroundColor = "red";
+                }
+                // console.log(inputfield.value);
+            }
+        </script>
+    </body>
+</html>

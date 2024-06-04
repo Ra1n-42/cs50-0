@@ -1,4 +1,4 @@
-## [CS50’s Introduction to Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
+## [Harvard - CS50’s Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
 
 - Week 1 C
 - Week 2 Arrays
