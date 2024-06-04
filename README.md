@@ -1,4 +1,4 @@
-## [CS50’s Introduction to Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
+# [Harvard - CS50’s Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
 
 This course was quite the adventure into the world of computer science from Harvard University,
 offered through edX. From learning the basics of programming in C to exploring advanced topics like
