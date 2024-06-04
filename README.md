@@ -20,8 +20,7 @@ artificial intelligence and cybersecurity, it was a journey filled with learning
 
 ## Problem Sets:
 
-Each week came with its own set of problem sets. I'm happy to say that I managed to tackle them all
-and scored 100% on each one!
+Each week came with its own set of problem sets. feel free to visite each Problem and see how i solved it
 
 ## Certificate:
 
