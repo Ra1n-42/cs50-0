@@ -6,7 +6,7 @@ artificial intelligence and cybersecurity, it was a journey filled with learning
 
 ## Weeks and Topics:
 
-- Week 1: Getting started with C
+- [Week 1: Getting started with C](https://github.com/Ra1n-42/cs50-0/tree/main/week1)
 - Week 2: Exploring Arrays
 - Week 3: Diving into Algorithms
 - Week 4: Understanding Memory
